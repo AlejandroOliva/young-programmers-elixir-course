@@ -1,0 +1,262 @@
+# 🧠 Class 1: Logic and Decisions
+
+```elixir
+Mix.install([{:kino, "~> 0.12.0"}])
+```
+
+## 🎯 Objectives
+
+* 🤔 Understand conditional logic
+* 🔀 Use if/else to make decisions
+* ✅ Create true/false conditions
+* 🎮 Apply in interactive programs
+
+## 🤔 What is Conditional Logic?
+
+In life we make decisions all the time:
+- **IF** it rains, **THEN** I take an umbrella
+- **IF** I'm hungry, **THEN** I eat
+- **IF** it's night, **THEN** I sleep
+
+In programming we do the same!
+
+## ✅ True and False
+
+In Elixir (and programming), there are only two logical values:
+- `true` = true ✅
+- `false` = false ❌
+
+```elixir
+IO.inspect(true)
+IO.inspect(false)
+```
+
+## 🔍 Comparisons
+
+We can compare things:
+
+```elixir
+# Greater than
+IO.inspect(5 > 3)  # true
+
+# Less than
+IO.inspect(2 < 1)  # false
+
+# Equal to (use ==, not =)
+IO.inspect(5 == 5)  # true
+
+# Different from
+IO.inspect(3 != 5)  # true
+
+# Greater or equal
+IO.inspect(5 >= 5)  # true
+
+# Less or equal
+IO.inspect(3 <= 2)  # false
+```
+
+## 🔀 Your First IF
+
+```elixir
+age = 10
+
+if age >= 10 do
+  IO.puts("You're big!")
+end
+```
+
+### Explanation
+
+* `if` = "if"
+* `age >= 10` = the condition (is it true?)
+* `do` = starts what to do if it's true
+* `end` = ends the if
+
+## ↔️ IF with ELSE
+
+```elixir
+age = 7
+
+if age >= 10 do
+  IO.puts("You're big")
+else
+  IO.puts("You're small")
+end
+```
+
+**ELSE** = "if not" (when the condition is false)
+
+## 🎯 Your Turn
+
+```elixir
+# Change the number and test
+number = 15
+
+if number > 10 do
+  IO.puts("The number is greater than 10")
+else
+  IO.puts("The number is 10 or less")
+end
+```
+
+## 🎮 Interactive Example
+
+```elixir
+age_input = Kino.Input.number("How old are you?")
+```
+
+```elixir
+age_input
+```
+
+```elixir
+age = Kino.Input.read(age_input)
+
+message = if age >= 13 do
+  "You're a teenager or older"
+else
+  "You're a child"
+end
+
+Kino.Markdown.new("""
+<div style="background-color: #4caf50; padding: 30px; border-radius: 15px; color: white; text-align: center;">
+  <h1>Result</h1>
+  <p style="font-size: 24px;">You are #{age} years old</p>
+  <p style="font-size: 20px;">#{message}</p>
+</div>
+""")
+```
+
+## 🌡️ Multiple Conditions
+
+Sometimes we need more than two options:
+
+```elixir
+temperature = 25
+
+cond do
+  temperature > 30 -> IO.puts("It's very hot! 🔥")
+  temperature > 20 -> IO.puts("It's pleasantly warm ☀️")
+  temperature > 10 -> IO.puts("It's cool 🍃")
+  true -> IO.puts("It's cold ❄️")
+end
+```
+
+**COND** = when you have many options
+
+## 🎯 Challenge 1: Grades
+
+Create a program that:
+- Asks for a grade (0-100)
+- Says if it's: Excellent (90+), Good (70-89), Regular (50-69), or Needs improvement (<50)
+
+```elixir
+grade_input = Kino.Input.number("Your grade (0-100)")
+```
+
+```elixir
+grade_input
+```
+
+```elixir
+grade = Kino.Input.read(grade_input)
+
+result = cond do
+  grade >= 90 -> "🌟 Excellent!"
+  grade >= 70 -> "👍 Good!"
+  grade >= 50 -> "📚 Regular"
+  true -> "💪 Needs improvement"
+end
+
+color = cond do
+  grade >= 90 -> "#4caf50"
+  grade >= 70 -> "#2196f3"
+  grade >= 50 -> "#ff9800"
+  true -> "#f44336"
+end
+
+Kino.Markdown.new("""
+<div style="background-color: #{color}; padding: 40px; border-radius: 15px; color: white; text-align: center;">
+  <h1>Your Grade</h1>
+  <h2 style="font-size: 60px;">#{grade}</h2>
+  <p style="font-size: 28px;">#{result}</p>
+</div>
+""")
+```
+
+## 🎮 Challenge 2: Guessing Game
+
+```elixir
+secret_number = Enum.random(1..10)
+
+Kino.Markdown.new("""
+# 🎲 Guessing Game
+Guess the number from 1 to 10!
+""")
+```
+
+```elixir
+attempt_input = Kino.Input.number("Your attempt")
+```
+
+```elixir
+attempt_input
+```
+
+```elixir
+attempt = Kino.Input.read(attempt_input)
+
+{message, color, emoji} = cond do
+  attempt == secret_number ->
+    {"CORRECT! 🎉", "#4caf50", "🎉"}
+
+  abs(attempt - secret_number) == 1 ->
+    {"Very close! 🔥", "#ff9800", "🔥"}
+
+  attempt > secret_number ->
+    {"Too high 📈", "#2196f3", "⬇️"}
+
+  attempt < secret_number ->
+    {"Too low 📉", "#2196f3", "⬆️"}
+end
+
+Kino.Markdown.new("""
+<div style="background-color: #{color}; padding: 40px; border-radius: 15px; color: white; text-align: center;">
+  <h1 style="font-size: 80px;">#{emoji}</h1>
+  <h2>#{message}</h2>
+  <p>The number was: #{secret_number}</p>
+  <p>Your attempt: #{attempt}</p>
+</div>
+""")
+```
+
+## 🏆 Final Challenge: Clothing Advisor
+
+Create a program that:
+- Asks for temperature
+- Recommends what to wear
+- Uses colors according to temperature
+- Be creative with messages
+
+```elixir
+# Your code here
+```
+
+## 📝 Summary
+
+Today you learned:
+
+* ✅ What `true` and `false` are
+* ✅ Comparisons (`>`, `<`, `==`, `!=`)
+* ✅ Use `if` and `else`
+* ✅ Use `cond` for multiple options
+* ✅ Create programs that make decisions
+
+## 🚀 Next Class
+
+In the next class we'll see **Functions with Logic** - you'll combine functions with the decisions you learned today!
+
+---
+
+**Excellent work! Now your programs can think. 🧠✨**
+
