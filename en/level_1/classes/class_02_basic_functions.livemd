@@ -1,0 +1,432 @@
+# 🎪 Class 2: Basic Functions - Teaching New Tricks
+
+```elixir
+# Welcome back, programmer! 🌟
+# Today we'll learn something SUPER COOL: Functions!
+```
+
+## 🎯 What will you learn today?
+
+Today you'll discover:
+
+* 🎪 What a function is (like a magic trick!)
+* 🎨 How to create your own functions
+* 🔄 How to use functions again and again
+* 🎁 How to give information to a function
+
+## 🤔 What is a Function?
+
+Imagine you teach a trick to your dog. For example: "give paw".
+
+Every time you say "give paw", your dog does the trick.
+
+**Functions are the same!** You teach a "trick" to the computer, give it a name, and then you can ask it to do it whenever you want.
+
+## 👋 Functions You Already Know
+
+Remember `IO.puts()`? That's a function!
+
+```elixir
+# IO.puts is a function that already exists
+# Someone created it for us to use
+
+IO.puts("Functions are awesome!")
+```
+
+## 🎨 Create Your First Function
+
+Let's create a function that says "Hello!" every time we call it:
+
+```elixir
+defmodule MyFirstTricks do
+  def greet do
+    IO.puts("Hello! 👋")
+    IO.puts("How are you?")
+  end
+end
+
+# Now we "call" our function (we ask it to do the trick)
+MyFirstTricks.greet()
+```
+
+### 🎉 What just happened?
+
+* `defmodule MyFirstTricks do` = We create a "box" to store our tricks
+* `def greet do` = We teach it a new trick called "greet"
+* Between `do` and `end` we put what we want it to do
+* `MyFirstTricks.greet()` = We ask it to do the trick
+
+### 🎯 Now you: Personalize the greeting
+
+```elixir
+defmodule MyTricks do
+  def greet do
+    # Change these messages to whatever you want
+    IO.puts("Hello!")
+    IO.puts("I'm a programmer")
+  end
+end
+
+MyTricks.greet()
+```
+
+## 🔄 The Magic of Reusing
+
+The best thing about functions is you can use them many times!
+
+```elixir
+defmodule Animals do
+  def bark do
+    IO.puts("Woof woof! 🐕")
+  end
+
+  def meow do
+    IO.puts("Meow meow! 🐱")
+  end
+end
+
+# We can call them as many times as we want
+Animals.bark()
+Animals.meow()
+Animals.bark()
+Animals.bark()
+Animals.meow()
+```
+
+### 🎮 Your turn: Create animal sounds
+
+```elixir
+defmodule MyAnimals do
+  def dog do
+    # Your code here
+  end
+
+  def cat do
+    # Your code here
+  end
+
+  def bird do
+    # Your code here
+  end
+end
+
+# Call your functions here
+MyAnimals.dog()
+```
+
+## 🎁 Functions with Information (Parameters)
+
+Sometimes we want our function to use information we give it. Like giving specific instructions!
+
+```elixir
+defmodule Greeter do
+  def greet_person(name) do
+    IO.puts("Hello, #{name}! 🌟")
+    IO.puts("So happy to see you!")
+  end
+end
+
+# Now we can greet different people
+Greeter.greet_person("Mary")
+Greeter.greet_person("Peter")
+Greeter.greet_person("your name here")
+```
+
+### 💫 What is that `name`?
+
+* `name` is a **parameter** - like a blank space we fill in
+* When we call `greet_person("Mary")`, `name` becomes "Mary"
+* It's like a temporary box that stores what we give it
+
+### 🎯 Your turn: Greet your friends
+
+```elixir
+defmodule MyGreeter do
+  def greet_friend(name) do
+    # Create a special greeting using #{name}
+    IO.puts("Hello, #{name}!")
+    # Add more lines...
+  end
+end
+
+# Greet 3 of your friends or family members
+MyGreeter.greet_friend("...")
+```
+
+## 🎂 Functions with More Than One Parameter
+
+You can give more than one piece of information to a function!
+
+```elixir
+defmodule Presenter do
+  def introduce(name, age) do
+    IO.puts("My name is #{name}")
+    IO.puts("I am #{age} years old")
+  end
+end
+
+Presenter.introduce("Ana", 9)
+Presenter.introduce("Luis", 8)
+```
+
+### 🎨 More fun examples
+
+```elixir
+defmodule SuperCalculator do
+  def add(number1, number2) do
+    result = number1 + number2
+    IO.puts("#{number1} + #{number2} = #{result}")
+  end
+
+  def multiply(number1, number2) do
+    result = number1 * number2
+    IO.puts("#{number1} × #{number2} = #{result}")
+  end
+end
+
+SuperCalculator.add(5, 3)
+SuperCalculator.multiply(4, 7)
+```
+
+### 🎯 Your turn: Your own calculator
+
+```elixir
+defmodule MyCalculator do
+  def add(a, b) do
+    # Your code here
+  end
+
+  def subtract(a, b) do
+    # Your code here
+  end
+
+  def multiply(a, b) do
+    # Your code here
+  end
+end
+
+# Test your calculator
+MyCalculator.add(10, 5)
+MyCalculator.subtract(10, 5)
+MyCalculator.multiply(10, 5)
+```
+
+## 🎪 Function that Returns Something
+
+Functions can return a result that we can save:
+
+```elixir
+defmodule Math do
+  def double(number) do
+    number * 2
+  end
+
+  def age_in_5_years(current_age) do
+    current_age + 5
+  end
+end
+
+# We save the result in a variable
+my_age = 9
+my_future_age = Math.age_in_5_years(my_age)
+
+IO.puts("I am now #{my_age} years old")
+IO.puts("In 5 years I will be #{my_future_age} years old")
+```
+
+## 🏆 Challenge 1: Personal Robot
+
+Create a robot that can do several things. Your robot must have at least 3 different functions.
+
+```elixir
+defmodule MyRobot do
+  def introduce do
+    IO.puts("Beep boop! I'm a robot 🤖")
+    # Add more...
+  end
+
+  def count_to(number) do
+    # The robot counts to the number you give it
+    # For now just show the final number
+    IO.puts("Beep! I counted to #{number}")
+  end
+
+  def say_goodbye do
+    # Your goodbye code
+  end
+end
+
+# Use your robot
+MyRobot.introduce()
+MyRobot.count_to(10)
+MyRobot.say_goodbye()
+```
+
+## 🏆 Challenge 2: Story Generator
+
+Create a function that generates stories with the names and things you give it:
+
+```elixir
+defmodule StoryGenerator do
+  def adventure_story(hero, villain, place) do
+    IO.puts("🌟 THE GREAT ADVENTURE 🌟")
+    IO.puts("")
+    IO.puts("Once upon a time there was a hero named #{hero}.")
+    IO.puts("#{hero} had to save #{place}.")
+    # Continue the story...
+    IO.puts("And so #{hero} defeated #{villain}.")
+    IO.puts("The End! 🎉")
+  end
+end
+
+# Create different stories
+StoryGenerator.adventure_story("SuperCat", "Dr. Evil", "the city")
+```
+
+### 🎯 Your turn: Your story
+
+```elixir
+defmodule MyStories do
+  def my_story(character1, character2, magic_object) do
+    # Create your own story using these elements
+  end
+end
+
+# Tell your story
+MyStories.my_story("...", "...", "...")
+```
+
+## 🎨 Challenge 3: Message Creator
+
+Create functions that compose different types of messages:
+
+```elixir
+defmodule MessageCreator do
+  def birthday(name, age) do
+    IO.puts("🎂 HAPPY BIRTHDAY! 🎂")
+    IO.puts("#{name}, today you turn #{age} years old")
+    IO.puts("Have an amazing day! 🎉")
+  end
+
+  def good_night(name) do
+    IO.puts("🌙 Good night, #{name}")
+    IO.puts("Sweet dreams! ✨")
+  end
+end
+
+# Try them
+MessageCreator.birthday("Mary", 9)
+MessageCreator.good_night("Peter")
+```
+
+### 🎯 Add your own messages
+
+```elixir
+defmodule MyMessages do
+  # Add functions for:
+  # - Congratulate on a good grade
+  # - Cheer up someone who is sad
+  # - Celebrate a victory
+  # - Whatever you want...
+end
+```
+
+## 🌈 Extra Challenge: Combine Functions
+
+Functions can call other functions. It's like doing combined tricks!
+
+```elixir
+defmodule BirthdayParty do
+  def sing_birthday(name) do
+    IO.puts("♪ Happy birthday to you ♪")
+    IO.puts("♪ Happy birthday to you ♪")
+    IO.puts("♪ Happy birthday dear #{name} ♪")
+    IO.puts("♪ Happy birthday to you ♪")
+  end
+
+  def applaud do
+    IO.puts("👏 👏 👏 👏 👏")
+  end
+
+  def complete_party(name, age) do
+    IO.puts("🎉🎈🎊 PARTY TIME! 🎊🎈🎉")
+    IO.puts("")
+    sing_birthday(name)
+    IO.puts("")
+    IO.puts("#{name} turns #{age} years old!")
+    applaud()
+    IO.puts("")
+    IO.puts("🎂🍰🧁 LET'S EAT CAKE! 🧁🍰🎂")
+  end
+end
+
+# A complete party in code!
+BirthdayParty.complete_party("Ana", 9)
+```
+
+## 📝 Today's Summary
+
+Look at everything amazing you learned! 🌟
+
+Today you discovered:
+
+* ✅ What functions are (tricks we teach the computer)
+* ✅ How to create functions with `def name do ... end`
+* ✅ How to use `defmodule` to organize your functions
+* ✅ How to call functions again and again
+* ✅ How to give information to functions (parameters)
+* ✅ That functions can use other functions
+
+## 🎯 Extra Practice
+
+If you want to keep practicing:
+
+1. **Create a virtual zoo:** Functions for each animal with their sounds
+2. **Super calculator:** More mathematical operations
+3. **Joke generator:** Functions that tell jokes
+4. **Simple translator:** Functions that "translate" words
+
+## 💭 Reflect
+
+* Which function was most fun to create?
+* Do you understand what parameters are for?
+* What else would you like a function to do?
+
+## 🚀 Next Class
+
+In the next class we'll learn about **Colors and Sounds** - we're going to make even more visual and fun programs! 🎨🔊
+
+---
+
+## 👨‍👩‍👧‍👦 Note for Mentors
+
+**Objectives:**
+
+* Understand functions as reusable "recipes"
+* Practice with parameters
+* Basic modularization
+
+**Key concepts:**
+
+* `defmodule` / `def` / `do...end`
+* Calling functions vs. defining them
+* Parameters as spaces we fill in
+
+**Suggested time:**
+
+* Introduction and first functions: 15 min
+* Functions with parameters: 15 min
+* Challenges: 25 min
+* Closure: 5 min
+
+**Attention:**
+
+* Syntax can be confusing at first
+* Emphasize concept over syntax
+* Use constant analogies (recipes, pet tricks)
+* Celebrate each function that works
+
+---
+
+**Excellent work! Now you can teach new tricks to the computer. 🎪✨**
+

@@ -1,0 +1,169 @@
+# 🔄 Clase 9: Repaso y Reto
+
+```elixir
+Mix.install([
+  {:kino, "~> 0.12.0"}
+])
+```
+
+## 🎯 Objetivos
+
+* 📚 Repasar todo lo aprendido
+* 🏆 Completar desafíos divertidos
+* 🌟 Prepararte para el proyecto final
+* 🎉 ¡Celebrar tu progreso!
+
+## 📖 ¿Qué Hemos Aprendido?
+
+En estas 8 clases aprendiste:
+
+* ✅ Clase 1: Hablar con la computadora (IO.puts)
+* ✅ Clase 2: Funciones (enseñar trucos)
+* ✅ Clase 3: Colores y diseño
+* ✅ Clase 4: Variables (guardar información)
+* ✅ Clase 5: Juegos interactivos
+* ✅ Clase 6: Listas (guardar varias cosas)
+* ✅ Clase 7: Historias interactivas
+* ✅ Clase 8: Dibujar con código
+
+## 🎮 Reto 1: Mini Presentación
+
+Crea un programa que:
+
+* Pida tu nombre
+* Pida tu edad
+* Pida tu color favorito
+* Muestre todo bonito con colores
+
+```elixir
+# Tu código aquí
+```
+
+## 🎨 Reto 2: Calculadora Colorida
+
+Crea una calculadora que:
+
+* Pida dos números
+* Muestre suma, resta y multiplicación
+* Todo con colores bonitos
+
+```elixir
+# Tu código aquí
+```
+
+## 🏆 Reto 3: Juego de Adivinanza Mejorado
+
+Crea un juego que:
+
+* Tenga al menos 3 preguntas
+* Cuente los puntos
+* Muestre resultado con colores
+
+```elixir
+# Tu código aquí
+```
+
+## 📖 Reto 4: Historia + Dibujo
+
+Combina:
+
+* Una historia corta interactiva
+* Con un dibujo ASCII relacionado
+* Y colores
+
+```elixir
+# Tu código aquí
+```
+
+## 🌟 Reto 5: Tu Página Web Personal
+
+Crea una página sobre ti que tenga:
+
+* Tu nombre y edad
+* Tus favoritos (lista)
+* Colores bonitos
+* Al menos un emoji
+* Que pida información al usuario
+
+```elixir
+# Tu código aquí
+```
+
+## 🎯 Reto 6: Mini Proyecto Libre
+
+¡Crea lo que quieras! Algunas ideas:
+
+* 🎮 Un juego diferente
+* 📖 Una historia más larga
+* 🎨 Una galería de dibujos
+* 🤖 Un robot interactivo
+* 🌈 Un generador de arcoíris
+* ✨ Lo que imagines
+
+```elixir
+# Tu proyecto creativo aquí
+```
+
+## 💭 Auto-Evaluación
+
+Pregúntate honestamente:
+
+### ¿Puedo...?
+
+* [ ] Mostrar mensajes con IO.puts
+* [ ] Crear funciones básicas
+* [ ] Usar variables
+* [ ] Guardar información en listas
+* [ ] Hacer programas con colores
+* [ ] Crear inputs interactivos
+* [ ] Dibujar con código
+* [ ] Combinar todo lo anterior
+
+### Si marcaste menos de 6:
+
+* Está bien, tómate tu tiempo
+* Repasa las clases que necesites
+* Practica más los ejercicios
+* Pide ayuda a tu mentor
+
+### Si marcaste 6 o más:
+
+* ¡Excelente! Estás listo para el proyecto final
+* Sigue practicando para mejorar
+* Ayuda a otros compañeros si puedes
+
+## 🎉 Celebra Tu Progreso
+
+Mira dónde empezaste y dónde estás ahora:
+
+**Antes:**
+* No sabías qué era programar
+* La computadora era un misterio
+
+**Ahora:**
+* Puedes crear programas interactivos
+* Entiendes cómo funciona el código
+* Haces cosas visuales y divertidas
+* ¡Eres un programador!
+
+## 📝 Resumen
+
+Hoy repasaste:
+
+* ✅ Todos los conceptos del nivel
+* ✅ Completaste desafíos integradores
+* ✅ Te preparaste para el proyecto final
+* ✅ Celebraste tu progreso
+
+## 🚀 Próxima Clase
+
+La próxima clase es la **CLASE 10: PROYECTO FINAL**
+
+Vas a crear tu propio programa combinando todo lo que aprendiste.
+
+¡Piensa en qué te gustaría crear!
+
+---
+
+**¡Estás casi al final del Nivel 1! 🌟 ¡Eres increíble! 🚀**
+

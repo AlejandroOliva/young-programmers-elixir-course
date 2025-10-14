@@ -1,0 +1,173 @@
+# 📖 Class 7: Interactive Story
+
+```elixir
+Mix.install([
+  {:kino, "~> 0.12.0"}
+])
+```
+
+## 🎯 Objectives
+
+* 📖 Create interactive stories
+* 🎭 Make the user participate
+* 🔀 Stories with different endings
+* ✨ Be creative!
+
+## 📚 Your First Story
+
+```elixir
+name_input = Kino.Input.text("What's your name?")
+```
+
+```elixir
+name_input
+```
+
+```elixir
+name = Kino.Input.read(name_input)
+
+Kino.Markdown.new("""
+# 🌟 The Great Adventure of #{name} 🌟
+
+Once upon a time there was a brave adventurer named **#{name}**.
+
+One day, #{name} found a mysterious map in their backpack.
+
+The map showed the way to a hidden treasure.
+
+What will #{name} do?
+
+*(Continue the story in the next cell...)*
+""")
+```
+
+## 🔀 Story with Choices
+
+```elixir
+name_input = Kino.Input.text("Your name")
+animal_input = Kino.Input.select("Choose your companion", [{:dog, "🐕 Dog"}, {:cat, "🐱 Cat"}, {:dragon, "🐉 Dragon"}])
+```
+
+```elixir
+name_input
+animal_input
+```
+
+```elixir
+name = Kino.Input.read(name_input)
+animal = Kino.Input.read(animal_input)
+
+animal_text =
+  case animal do
+    :dog -> "a loyal dog"
+    :cat -> "a magical cat"
+    :dragon -> "a small dragon"
+  end
+
+animal_emoji =
+  case animal do
+    :dog -> "🐕"
+    :cat -> "🐱"
+    :dragon -> "🐉"
+  end
+
+Kino.Markdown.new("""
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            padding: 40px; border-radius: 20px; color: white;">
+
+# 🌟 The Adventure of #{name} and #{animal_emoji} 🌟
+
+#{name} lived in a small village. One day, they found **#{animal_text}** in the forest.
+
+"Hello!" said #{animal_emoji}. "I need your help to save the kingdom."
+
+#{name} and #{animal_emoji} became friends and together began a great adventure.
+
+They crossed dark forests, crossed dangerous rivers, and climbed high mountains.
+
+Finally, they reached the evil sorcerer's castle. With bravery, #{name} and #{animal_emoji} defeated him.
+
+## 🎉 The Kingdom was Saved! 🎉
+
+And #{name} and #{animal_emoji} lived happily ever after.
+
+**THE END** 🌈
+
+</div>
+""")
+```
+
+## 🎨 Your Turn: Create Your Story
+
+```elixir
+# Gather information for your story
+character = Kino.Input.text("Hero's name")
+place = Kino.Input.text("Where does it happen? (beach, space, forest...)")
+magic_object = Kino.Input.text("Magic object")
+villain = Kino.Input.text("Villain's name")
+```
+
+```elixir
+character
+place
+magic_object
+villain
+```
+
+```elixir
+c = Kino.Input.read(character)
+p = Kino.Input.read(place)
+o = Kino.Input.read(magic_object)
+v = Kino.Input.read(villain)
+
+Kino.Markdown.new("""
+<div style="background-color: #f0f8ff; padding: 30px; border-radius: 15px; border: 3px solid #4682b4;">
+
+# ✨ The Legend of #{c} ✨
+
+In a place called **#{p}**, lived #{c}, a brave hero.
+
+One day, #{c} discovered **#{o}**, an object with magical powers.
+
+But the evil **#{v}** also wanted #{o}.
+
+#{v} attacked #{p}, but #{c} used #{o} to defend themselves.
+
+After an epic battle, #{c} defeated #{v}.
+
+Peace returned to #{p}, and #{c} was proclaimed a hero.
+
+## 🏆 Victory! 🏆
+
+And so ends the legend of #{c} and #{o}.
+
+</div>
+""")
+```
+
+## 🏆 Challenge: Complex Story
+
+Create a story with:
+
+* At least 3 user inputs
+* Different emojis and colors
+* At least 5 paragraphs
+* A beginning, middle, and end
+
+```elixir
+# Your epic story here
+```
+
+## 📝 Summary
+
+Today you learned:
+
+* ✅ Create interactive stories
+* ✅ Use inputs to personalize
+* ✅ Give options to the user
+* ✅ Combine creativity and code
+
+---
+
+**You're a digital storyteller! 📖✨**
+

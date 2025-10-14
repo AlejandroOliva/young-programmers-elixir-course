@@ -1,0 +1,161 @@
+# 📋 Class 6: Lists and Visual Patterns
+
+```elixir
+Mix.install([
+  {:kino, "~> 0.12.0"}
+])
+```
+
+## 🎯 Objectives
+
+* 📋 Understand what lists are
+* 🎨 Create visual patterns
+* 🌈 Work with collections
+
+## 📋 What is a List?
+
+A list is like a backpack where you store several things together.
+
+```elixir
+# List of fruits
+fruits = ["apple", "banana", "orange"]
+
+IO.inspect(fruits)
+```
+
+```elixir
+# List of numbers
+numbers = [1, 2, 3, 4, 5]
+
+IO.inspect(numbers)
+```
+
+```elixir
+# List of colors
+colors = ["red", "blue", "green", "yellow"]
+
+IO.inspect(colors)
+```
+
+## 🎨 Access Elements
+
+```elixir
+animals = ["dog", "cat", "bird", "fish"]
+
+# The first
+IO.puts("The first animal is: #{Enum.at(animals, 0)}")
+
+# The second
+IO.puts("The second animal is: #{Enum.at(animals, 1)}")
+
+# The last
+IO.puts("The last animal is: #{List.last(animals)}")
+```
+
+## 🌈 Create Color Patterns
+
+```elixir
+colors = ["red", "blue", "green", "yellow", "purple"]
+
+html_colors =
+  Enum.map(colors, fn color ->
+    """
+    <div style="background-color: #{color}; padding: 20px; margin: 5px; border-radius: 10px; color: white; font-weight: bold;">
+      #{String.upcase(color)}
+    </div>
+    """
+  end)
+  |> Enum.join("")
+
+Kino.Markdown.new(html_colors)
+```
+
+## 🎯 Your turn: Your List of Favorites
+
+```elixir
+# Create lists of your favorite things
+my_colors = ["...", "...", "..."]
+my_animals = ["...", "...", "..."]
+my_foods = ["...", "...", "..."]
+
+Kino.Markdown.new("""
+# 🌟 My Favorites 🌟
+
+## Favorite Colors
+* #{Enum.at(my_colors, 0)}
+* #{Enum.at(my_colors, 1)}
+* #{Enum.at(my_colors, 2)}
+
+## Favorite Animals
+* #{Enum.at(my_animals, 0)}
+* #{Enum.at(my_animals, 1)}
+* #{Enum.at(my_animals, 2)}
+""")
+```
+
+## 🎨 Visual Pattern with Lists
+
+```elixir
+# Create a repeated pattern
+emojis = ["⭐", "🌟", "✨", "💫"]
+
+pattern =
+  Enum.map(1..10, fn _ ->
+    random_emoji = Enum.random(emojis)
+    "<span style='font-size: 40px; margin: 10px;'>#{random_emoji}</span>"
+  end)
+  |> Enum.join("")
+
+Kino.Markdown.new("""
+<div style="text-align: center; background-color: #1a1a2e; padding: 30px; border-radius: 15px;">
+  #{pattern}
+</div>
+""")
+```
+
+## 🏆 Challenge: Personal Gallery
+
+```elixir
+# Create a gallery with your favorite themes
+my_items = [
+  %{emoji: "🎮", name: "Video Games", color: "#ff6b6b"},
+  %{emoji: "🎨", name: "Art", color: "#4ecdc4"},
+  %{emoji: "⚽", name: "Sports", color: "#45b7d1"}
+]
+
+gallery =
+  Enum.map(my_items, fn item ->
+    """
+    <div style="background-color: #{item.color}; 
+                padding: 30px; 
+                margin: 10px; 
+                border-radius: 15px; 
+                text-align: center;
+                color: white;">
+      <div style="font-size: 60px;">#{item.emoji}</div>
+      <h2>#{item.name}</h2>
+    </div>
+    """
+  end)
+  |> Enum.join("")
+
+Kino.Markdown.new("""
+<div style="display: flex; justify-content: space-around;">
+  #{gallery}
+</div>
+""")
+```
+
+## 📝 Summary
+
+Today you learned:
+
+* ✅ What lists are
+* ✅ How to store several elements together
+* ✅ Access elements from a list
+* ✅ Create visual patterns
+
+---
+
+**Lists are super useful! 📋✨**
+

@@ -1,0 +1,182 @@
+# 🎨 Class 8: Drawing with Code
+
+```elixir
+# Today you'll be an ASCII artist! 🎨
+# ASCII Art is drawing using only keyboard characters
+```
+
+## 🎯 Objectives
+
+* 🎨 Create drawings with characters
+* 📐 Understand patterns and shapes
+* 🌟 Be creative with code
+
+## 📏 Basic Lines
+
+```elixir
+# Horizontal line
+IO.puts("----------")
+
+# Longer line
+IO.puts("====================")
+
+# With different characters
+IO.puts("********************")
+IO.puts("~~~~~~~~~~~~~~~~~~~~")
+IO.puts("^^^^^^^^^^^^^^^^^^^^")
+```
+
+## 🔲 Squares and Rectangles
+
+```elixir
+IO.puts("+------+")
+IO.puts("|      |")
+IO.puts("|      |")
+IO.puts("|      |")
+IO.puts("+------+")
+```
+
+### 🎯 Your turn: Your square
+
+```elixir
+# Draw a bigger or smaller square
+```
+
+## 🏠 Simple House
+
+```elixir
+IO.puts("    /\\    ")
+IO.puts("   /  \\   ")
+IO.puts("  /    \\  ")
+IO.puts(" /______\\ ")
+IO.puts(" |      | ")
+IO.puts(" |  []  | ")
+IO.puts(" |______| ")
+```
+
+## 🎄 Christmas Tree
+
+```elixir
+IO.puts("     *     ")
+IO.puts("    ***    ")
+IO.puts("   *****   ")
+IO.puts("  *******  ")
+IO.puts(" ********* ")
+IO.puts("***********")
+IO.puts("    |||    ")
+IO.puts("    |||    ")
+```
+
+## 😊 Faces and Emojis
+
+```elixir
+# Happy face
+IO.puts("  ^   ^  ")
+IO.puts("    v    ")
+IO.puts(" \\___/   ")
+
+IO.puts("")
+
+# Sad face
+IO.puts("  T   T  ")
+IO.puts("    |    ")
+IO.puts("  ___    ")
+```
+
+## 🌟 Using String.duplicate
+
+To repeat something many times:
+
+```elixir
+# Repeat asterisks
+IO.puts(String.duplicate("*", 10))
+
+# Repeat emojis
+IO.puts(String.duplicate("⭐", 5))
+
+# Create lines
+IO.puts(String.duplicate("-", 20))
+```
+
+## 🎨 Patterns
+
+```elixir
+# Star pattern
+IO.puts(String.duplicate("* ", 10))
+IO.puts(String.duplicate(" *", 10))
+IO.puts(String.duplicate("* ", 10))
+IO.puts(String.duplicate(" *", 10))
+```
+
+## 🏆 Challenge 1: Draw an Animal
+
+```elixir
+# Example: A cat
+IO.puts(" /\\_/\\  ")
+IO.puts("( o.o ) ")
+IO.puts(" > ^ <  ")
+
+# Now you: draw your favorite animal
+```
+
+## 🏆 Challenge 2: Create a Robot
+
+```elixir
+# Your robot here
+IO.puts("  +---+  ")
+IO.puts("  |   |  ")
+IO.puts(" /|o o|\\")
+IO.puts("| | ∆ | |")
+IO.puts(" \\|___|/")
+IO.puts("  |_|_|  ")
+IO.puts(" _|   |_ ")
+```
+
+## 🎮 Challenge 3: Complete Scene
+
+```elixir
+# Create a scene with several elements
+# For example: sun, house, tree, person
+
+# Sun
+IO.puts(" \\ | /")
+IO.puts("  \\|/")
+IO.puts("-- ☀ --")
+IO.puts("  /|\\")
+IO.puts(" / | \\")
+
+IO.puts("")
+
+# House
+IO.puts("    /\\    ")
+IO.puts("   /  \\   ")
+IO.puts("  /____\\  ")
+IO.puts("  |    |  ")
+IO.puts("  | [] |  ")
+```
+
+## 🌟 Your Art Gallery
+
+```elixir
+# Combine everything to create your masterpiece
+IO.puts("=" <> String.duplicate("=", 40) <> "=")
+IO.puts("         🎨 MY ART GALLERY 🎨")
+IO.puts("=" <> String.duplicate("=", 40) <> "=")
+IO.puts("")
+
+# Add your drawings here
+```
+
+## 📝 Summary
+
+Today you learned:
+
+* ✅ Draw with characters (ASCII Art)
+* ✅ Create basic shapes
+* ✅ Use String.duplicate
+* ✅ Combine elements in scenes
+
+---
+
+**You're a code artist! 🎨✨**
+

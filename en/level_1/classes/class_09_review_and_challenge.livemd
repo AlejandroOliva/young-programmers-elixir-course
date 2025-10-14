@@ -1,0 +1,169 @@
+# 🔄 Class 9: Review and Challenge
+
+```elixir
+Mix.install([
+  {:kino, "~> 0.12.0"}
+])
+```
+
+## 🎯 Objectives
+
+* 📚 Review everything learned
+* 🏆 Complete fun challenges
+* 🌟 Prepare for the final project
+* 🎉 Celebrate your progress!
+
+## 📖 What Have We Learned?
+
+In these 8 classes you learned:
+
+* ✅ Class 1: Talk with the computer (IO.puts)
+* ✅ Class 2: Functions (teach tricks)
+* ✅ Class 3: Colors and design
+* ✅ Class 4: Variables (store information)
+* ✅ Class 5: Interactive games
+* ✅ Class 6: Lists (store several things)
+* ✅ Class 7: Interactive stories
+* ✅ Class 8: Draw with code
+
+## 🎮 Challenge 1: Mini Presentation
+
+Create a program that:
+
+* Asks for your name
+* Asks for your age
+* Asks for your favorite color
+* Shows everything beautifully with colors
+
+```elixir
+# Your code here
+```
+
+## 🎨 Challenge 2: Colorful Calculator
+
+Create a calculator that:
+
+* Asks for two numbers
+* Shows addition, subtraction and multiplication
+* Everything with beautiful colors
+
+```elixir
+# Your code here
+```
+
+## 🏆 Challenge 3: Improved Guessing Game
+
+Create a game that:
+
+* Has at least 3 questions
+* Counts points
+* Shows result with colors
+
+```elixir
+# Your code here
+```
+
+## 📖 Challenge 4: Story + Drawing
+
+Combine:
+
+* A short interactive story
+* With a related ASCII drawing
+* And colors
+
+```elixir
+# Your code here
+```
+
+## 🌟 Challenge 5: Your Personal Web Page
+
+Create a page about yourself that has:
+
+* Your name and age
+* Your favorites (list)
+* Beautiful colors
+* At least one emoji
+* Asks for user information
+
+```elixir
+# Your code here
+```
+
+## 🎯 Challenge 6: Free Mini Project
+
+Create whatever you want! Some ideas:
+
+* 🎮 A different game
+* 📖 A longer story
+* 🎨 A drawing gallery
+* 🤖 An interactive robot
+* 🌈 A rainbow generator
+* ✨ Whatever you imagine
+
+```elixir
+# Your creative project here
+```
+
+## 💭 Self-Evaluation
+
+Ask yourself honestly:
+
+### Can I...?
+
+* [ ] Show messages with IO.puts
+* [ ] Create basic functions
+* [ ] Use variables
+* [ ] Store information in lists
+* [ ] Make programs with colors
+* [ ] Create interactive inputs
+* [ ] Draw with code
+* [ ] Combine all of the above
+
+### If you checked less than 6:
+
+* It's okay, take your time
+* Review the classes you need
+* Practice the exercises more
+* Ask your mentor for help
+
+### If you checked 6 or more:
+
+* Excellent! You're ready for the final project
+* Keep practicing to improve
+* Help other classmates if you can
+
+## 🎉 Celebrate Your Progress
+
+Look at where you started and where you are now:
+
+**Before:**
+* You didn't know what programming was
+* The computer was a mystery
+
+**Now:**
+* You can create interactive programs
+* You understand how code works
+* You make visual and fun things
+* You're a programmer!
+
+## 📝 Summary
+
+Today you reviewed:
+
+* ✅ All concepts of the level
+* ✅ Completed integrating challenges
+* ✅ Prepared for the final project
+* ✅ Celebrated your progress
+
+## 🚀 Next Class
+
+The next class is **CLASS 10: FINAL PROJECT**
+
+You're going to create your own program combining everything you learned.
+
+Think about what you'd like to create!
+
+---
+
+**You're almost at the end of Level 1! 🌟 You're amazing! 🚀**
+

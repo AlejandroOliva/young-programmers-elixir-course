@@ -1,0 +1,143 @@
+# 📦 Class 4: Variables and Messages - Storing Information
+
+```elixir
+Mix.install([
+  {:kino, "~> 0.12.0"}
+])
+```
+
+## 🎯 Objectives
+
+* 📦 Understand what variables are
+* 💾 Store information
+* 🔄 Reuse information
+* ✉️ Create personalized messages
+
+## 📦 What is a Variable?
+
+A **variable** is like a labeled box where you store something.
+
+Imagine you have a box, you put a label that says "toys", and inside you store your favorite toys.
+
+```elixir
+# Creating a variable is like putting something in a box
+name = "Mary"
+age = 9
+favorite_color = "blue"
+
+IO.puts(name)
+IO.puts(age)
+IO.puts(favorite_color)
+```
+
+## 🎨 Using Variables in Messages
+
+```elixir
+name = "Peter"
+age = 8
+
+IO.puts("Hello, my name is #{name}")
+IO.puts("I am #{age} years old")
+IO.puts("In one year I will be #{age + 1} years old")
+```
+
+### 🎯 Your turn
+
+```elixir
+my_name = "..."
+my_age = 0
+my_city = "..."
+
+IO.puts("Hello! I'm #{my_name}")
+IO.puts("I am #{my_age} years old")
+IO.puts("I live in #{my_city}")
+```
+
+## 🔢 Variables with Numbers
+
+```elixir
+apples = 5
+oranges = 3
+total = apples + oranges
+
+IO.puts("I have #{apples} apples")
+IO.puts("I have #{oranges} oranges")
+IO.puts("In total I have #{total} fruits")
+```
+
+## 🎮 Interactive Inputs
+
+```elixir
+name_input = Kino.Input.text("What's your name?")
+age_input = Kino.Input.number("How old are you?")
+```
+
+```elixir
+name_input
+age_input
+```
+
+```elixir
+name = Kino.Input.read(name_input)
+age = Kino.Input.read(age_input)
+
+Kino.Markdown.new("""
+<div style="background-color: #e3f2fd; padding: 30px; border-radius: 15px;">
+  <h1>Hello, #{name}! 👋</h1>
+  <h2>You are #{age} years old</h2>
+  <p>In 5 years you will be #{age + 5} years old</p>
+  <p>2 years ago you were #{age - 2} years old</p>
+</div>
+""")
+```
+
+## 🏆 Challenge: Your Presentation Card
+
+```elixir
+name_input = Kino.Input.text("Your name")
+age_input = Kino.Input.number("Your age")
+color_input = Kino.Input.text("Your favorite color")
+animal_input = Kino.Input.text("Your favorite animal")
+```
+
+```elixir
+name_input
+age_input
+color_input
+animal_input
+```
+
+```elixir
+name = Kino.Input.read(name_input)
+age = Kino.Input.read(age_input)
+color = Kino.Input.read(color_input)
+animal = Kino.Input.read(animal_input)
+
+Kino.Markdown.new("""
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            padding: 40px; border-radius: 20px; color: white; text-align: center;">
+  <h1>🌟 #{name} 🌟</h1>
+  <h2>#{age} years old</h2>
+  <hr style="border-color: white;">
+  <p><strong>Favorite color:</strong> #{color}</p>
+  <p><strong>Favorite animal:</strong> #{animal}</p>
+  <p style="font-size: 60px; margin: 20px 0;">😊</p>
+  <p><em>"I love programming!"</em></p>
+</div>
+""")
+```
+
+## 📝 Summary
+
+Today you learned:
+
+* ✅ Variables store information
+* ✅ We use `=` to store
+* ✅ `#{variable}` to use in text
+* ✅ Kino.Input to ask for information
+* ✅ Create personalized messages
+
+---
+
+**Excellent work! Now you know how to store and use information. 📦✨**
+

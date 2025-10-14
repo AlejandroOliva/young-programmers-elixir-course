@@ -1,0 +1,299 @@
+# 🎯 Class 1: Introduction to Programming
+
+```elixir
+# Welcome to your first programming class! 🚀
+# This is a "comment" - the computer ignores it, it's just for you and me
+```
+
+## 🌟 What will you learn today?
+
+Today you're going to discover:
+
+* 🖥️ What programming is
+* 📝 How to "talk" with the computer
+* ▶️ How to make the computer do things
+* 🎉 Your first program!
+
+## 📚 What is programming?
+
+**Programming** is like teaching tricks to your computer. You give it instructions and it follows them.
+
+It's like:
+
+* 📖 Writing a cooking recipe
+* 🎮 Programming a robot's movements
+* 🎨 Giving instructions to draw
+
+The computer does **exactly** what you tell it, no more, no less!
+
+## 🗣️ Talking with the Computer
+
+To talk with the computer, we use a special language called **Elixir**.
+
+Don't worry, it's easier than it seems!
+
+## 👋 Your First Program: Hello, World!
+
+Ready for your first program? Let's make the computer greet you!
+
+```elixir
+# Press the "play" button (▶️) above this code
+# Or press Ctrl+Enter (Cmd+Enter on Mac)
+
+IO.puts("Hello, world!")
+```
+
+### 🎉 You did it!
+
+Did you see the message? You just programmed!
+
+**What do those words mean?**
+
+* `IO.puts` = Tells the computer "show this on the screen"
+* `"Hello, world!"` = The message we want to show
+* The quotes `"` tell it that it's text
+
+## 🎨 Now you: Change the message
+
+```elixir
+# Change the message to something YOU want to say
+# Examples: "Hello, I'm [your name]!", "I love programming!", etc.
+
+IO.puts("Hello, I'm a programmer!")
+```
+
+### 💡 Experiment
+
+What happens if...?
+
+* You change the words inside the quotes?
+* You use emojis? 🎨🚀🌟
+* You write in CAPITALS?
+
+TRY IT! The best way to learn is by experimenting.
+
+## 📢 Multiple Messages
+
+Did you know you can show several messages in a row?
+
+```elixir
+IO.puts("Hello!")
+IO.puts("My name is [your name]")
+IO.puts("And I love programming!")
+```
+
+### 🎯 Your turn
+
+Change the code above so that:
+
+1. You greet yourself
+2. Say your age
+3. Say your favorite color
+
+## 🎲 Numbers and Math
+
+The computer also knows math! Let's try:
+
+```elixir
+# Addition
+IO.puts(5 + 3)
+```
+
+```elixir
+# Subtraction
+IO.puts(10 - 4)
+```
+
+```elixir
+# Multiplication (uses * instead of ×)
+IO.puts(6 * 7)
+```
+
+```elixir
+# Division (uses / instead of ÷)
+IO.puts(20 / 4)
+```
+
+### 🧮 Fun math!
+
+```elixir
+# The computer can do complicated calculations in an instant
+IO.puts(123 + 456)
+IO.puts(100 * 8)
+IO.puts(1000 / 5)
+```
+
+## 🎨 Mixing Text and Numbers
+
+You can combine text and numbers in a special way:
+
+```elixir
+age = 9
+IO.puts("I am #{age} years old")
+```
+
+### 💫 What happened here?
+
+* `age = 9` tells the computer "save the number 9 with the name 'age'"
+* `#{age}` tells it "put the number we saved here"
+
+### 🎯 Your turn: Create your presentation
+
+```elixir
+# Fill in with your information
+my_name = "Your name here"
+my_age = 0
+favorite_color = "Your color here"
+
+IO.puts("Hello! My name is #{my_name}")
+IO.puts("I am #{my_age} years old")
+IO.puts("My favorite color is #{favorite_color}")
+```
+
+## 🎮 Mini Challenge 1: Personal Calculator
+
+Let's create a mini calculator. You choose the numbers!
+
+```elixir
+# Change these numbers to whatever you want
+number1 = 5
+number2 = 3
+
+IO.puts("My numbers are #{number1} and #{number2}")
+IO.puts("Sum: #{number1 + number2}")
+IO.puts("Subtraction: #{number1 - number2}")
+IO.puts("Multiplication: #{number1 * number2}")
+```
+
+### 🌟 Make it yours
+
+* Try with different numbers
+* Add your name at the beginning
+* Add more operations
+
+## 🏆 Mini Challenge 2: Secret Message
+
+Create a program that shows:
+
+1. A greeting
+2. Your name
+3. Your age in 5 years (use math)
+4. A farewell message
+
+```elixir
+# Write your code here
+
+
+
+
+# You can do it!
+```
+
+### 💡 Hint
+
+Remember to use:
+
+* `IO.puts("text")` to show text
+* `name = "something"` to save information
+* `#{name}` to use the saved information
+* Operations like `+` `-` `*` `/` for math
+
+## 🎨 Extra Challenge: Be Creative!
+
+If you finished everything and want more, try creating:
+
+**A short poem**
+
+```elixir
+IO.puts("Programming is great,")
+IO.puts("creating things without debate.")
+# Add more lines...
+```
+
+**Your daily schedule**
+
+```elixir
+IO.puts("At 7 I wake up")
+# Continue with your day...
+```
+
+**Curious facts about you**
+
+```elixir
+name = "Your name"
+favorite_animal = "Your animal"
+favorite_food = "Your food"
+
+IO.puts("I'm #{name} and I love #{favorite_animal}")
+# Add more...
+```
+
+## 📝 Today's Summary
+
+Look at everything you learned! 🎉
+
+Today you discovered:
+
+* ✅ What programming is (giving instructions to the computer)
+* ✅ How to use `IO.puts()` to show messages
+* ✅ That you can use text (between `" "`)
+* ✅ That you can use numbers and math
+* ✅ How to save information with `name = value`
+* ✅ How to combine text and numbers with `#{}`
+
+## 🎯 Extra Practice (at home)
+
+If you want to keep practicing:
+
+1. **Create a longer presentation** about yourself
+2. **Make a calculator** that adds your age + a relative's age
+3. **Write a message** for someone special
+4. **Experiment** by changing everything you can
+
+## 💭 Reflect
+
+Ask yourself:
+
+* What was the most fun part today?
+* What was the easiest?
+* What would you like to learn next?
+* What surprised you?
+
+## 🚀 Next Class
+
+In the next class you'll learn about **Functions** - how to teach the computer new tricks!
+
+It's going to be even more fun. 🎨
+
+---
+
+## 👨‍👩‍👧‍👦 Note for Mentors
+
+**Objectives of this class:**
+
+* Familiarization with Livebook
+* First contact with code
+* Overcome initial fear
+* Free experimentation
+
+**Key points:**
+
+* Celebrate each successful execution
+* Encourage changing values and experimenting
+* Errors are normal and valuable
+* The "play" button should be very clear
+
+**Approximate time:**
+
+* Introduction: 10 min
+* First programs: 15 min
+* Numbers and math: 10 min
+* Challenges: 20 min
+* Closure and reflection: 5 min
+
+**If there's extra time:** More free experimentation, show their creations, share.
+
+---
+
+**Congratulations on your first class! 🎉 You're officially a programmer! 💻✨**
+

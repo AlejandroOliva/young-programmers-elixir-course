@@ -1,0 +1,299 @@
+# 🎯 Clase 1: Introducción a la Programación
+
+```elixir
+# ¡Bienvenido a tu primera clase de programación! 🚀
+# Este es un "comentario" - la computadora lo ignora, es solo para ti y para mí
+```
+
+## 🌟 ¿Qué aprenderás hoy?
+
+Hoy vas a descubrir:
+
+* 🖥️ Qué es la programación
+* 📝 Cómo "hablar" con la computadora
+* ▶️ Cómo hacer que la computadora haga cosas
+* 🎉 ¡Tu primer programa!
+
+## 📚 ¿Qué es la programación?
+
+**Programar** es como enseñarle trucos a tu computadora. Le das instrucciones y ella las sigue.
+
+Es como:
+
+* 📖 Escribir una receta de cocina
+* 🎮 Programar los movimientos de un robot
+* 🎨 Dar instrucciones para dibujar
+
+La computadora hace **exactamente** lo que le dices, ¡ni más ni menos!
+
+## 🗣️ Hablando con la Computadora
+
+Para hablar con la computadora, usamos un lenguaje especial llamado **Elixir**.
+
+No te preocupes, ¡es más fácil de lo que parece!
+
+## 👋 Tu Primer Programa: ¡Hola, Mundo!
+
+¿Listo para tu primer programa? ¡Vamos a hacer que la computadora te salude!
+
+```elixir
+# Presiona el botón de "play" (▶️) que está arriba de este código
+# O presiona Ctrl+Enter (Cmd+Enter en Mac)
+
+IO.puts("¡Hola, mundo!")
+```
+
+### 🎉 ¡Lo lograste!
+
+¿Viste el mensaje? ¡Acabas de programar!
+
+**¿Qué significan esas palabras?**
+
+* `IO.puts` = Le dice a la computadora "muestra esto en la pantalla"
+* `"¡Hola, mundo!"` = El mensaje que queremos mostrar
+* Las comillas `"` le dicen que es texto
+
+## 🎨 Ahora tú: Cambia el mensaje
+
+```elixir
+# Cambia el mensaje por algo que TÚ quieras decir
+# Ejemplos: "¡Hola, soy [tu nombre]!", "¡Me encanta programar!", etc.
+
+IO.puts("¡Hola, soy programador!")
+```
+
+### 💡 Experimento
+
+¿Qué pasa si...?
+
+* ¿Cambias las palabras dentro de las comillas?
+* ¿Usas emojis? 🎨🚀🌟
+* ¿Escribes en mayúsculas?
+
+¡PRUÉBALO! La mejor forma de aprender es experimentando.
+
+## 📢 Múltiples Mensajes
+
+¿Sabías que puedes mostrar varios mensajes seguidos?
+
+```elixir
+IO.puts("¡Hola!")
+IO.puts("Me llamo [tu nombre]")
+IO.puts("¡Y me encanta programar!")
+```
+
+### 🎯 Tu turno
+
+Cambia el código de arriba para que:
+
+1. Te saludes
+2. Digas tu edad
+3. Digas tu color favorito
+
+## 🎲 Números y Matemáticas
+
+¡La computadora también sabe matemáticas! Vamos a probar:
+
+```elixir
+# Sumar
+IO.puts(5 + 3)
+```
+
+```elixir
+# Restar
+IO.puts(10 - 4)
+```
+
+```elixir
+# Multiplicar (se usa * en lugar de ×)
+IO.puts(6 * 7)
+```
+
+```elixir
+# Dividir (se usa / en lugar de ÷)
+IO.puts(20 / 4)
+```
+
+### 🧮 ¡Matemáticas divertidas!
+
+```elixir
+# La computadora puede hacer cálculos complicados en un instante
+IO.puts(123 + 456)
+IO.puts(100 * 8)
+IO.puts(1000 / 5)
+```
+
+## 🎨 Mezclar Texto y Números
+
+Puedes combinar texto y números de una manera especial:
+
+```elixir
+edad = 9
+IO.puts("Tengo #{edad} años")
+```
+
+### 💫 ¿Qué pasó aquí?
+
+* `edad = 9` le dice a la computadora "guarda el número 9 con el nombre 'edad'"
+* `#{edad}` le dice "pon aquí el número que guardamos"
+
+### 🎯 Tu turno: Crea tu presentación
+
+```elixir
+# Completa con tu información
+nombre = "Tu nombre aquí"
+edad = 0
+color_favorito = "Tu color aquí"
+
+IO.puts("¡Hola! Me llamo #{nombre}")
+IO.puts("Tengo #{edad} años")
+IO.puts("Mi color favorito es #{color_favorito}")
+```
+
+## 🎮 Mini Desafío 1: Calculadora Personal
+
+Vamos a crear una mini calculadora. ¡Tú eliges los números!
+
+```elixir
+# Cambia estos números por los que tú quieras
+numero1 = 5
+numero2 = 3
+
+IO.puts("Mis números son #{numero1} y #{numero2}")
+IO.puts("Suma: #{numero1 + numero2}")
+IO.puts("Resta: #{numero1 - numero2}")
+IO.puts("Multiplicación: #{numero1 * numero2}")
+```
+
+### 🌟 Hazlo tuyo
+
+* Prueba con números diferentes
+* Agrega tu nombre al principio
+* Agrega más operaciones
+
+## 🏆 Mini Desafío 2: Mensaje Secreto
+
+Crea un programa que muestre:
+
+1. Un saludo
+2. Tu nombre
+3. Tu edad en 5 años (usa matemáticas)
+4. Un mensaje de despedida
+
+```elixir
+# Escribe tu código aquí
+
+
+
+
+# ¡Tú puedes hacerlo!
+```
+
+### 💡 Pista
+
+Recuerda usar:
+
+* `IO.puts("texto")` para mostrar texto
+* `nombre = "algo"` para guardar información
+* `#{nombre}` para usar la información guardada
+* Operaciones como `+` `-` `*` `/` para matemáticas
+
+## 🎨 Desafío Extra: ¡Sé Creativo!
+
+Si terminaste todo y quieres más, intenta crear:
+
+**Un poema corto**
+
+```elixir
+IO.puts("Programar es genial,")
+IO.puts("crear cosas sin igual.")
+# Agrega más líneas...
+```
+
+**Tu horario del día**
+
+```elixir
+IO.puts("A las 7 me despierto")
+# Continúa con tu día...
+```
+
+**Datos curiosos sobre ti**
+
+```elixir
+nombre = "Tu nombre"
+animal_favorito = "Tu animal"
+comida_favorita = "Tu comida"
+
+IO.puts("Soy #{nombre} y me encantan los #{animal_favorito}")
+# Agrega más...
+```
+
+## 📝 Resumen de Hoy
+
+¡Mira todo lo que aprendiste! 🎉
+
+Hoy descubriste:
+
+* ✅ Qué es programar (dar instrucciones a la computadora)
+* ✅ Cómo usar `IO.puts()` para mostrar mensajes
+* ✅ Que puedes usar texto (entre `" "`)
+* ✅ Que puedes usar números y matemáticas
+* ✅ Cómo guardar información con `nombre = valor`
+* ✅ Cómo combinar texto y números con `#{}`
+
+## 🎯 Práctica Extra (en casa)
+
+Si quieres seguir practicando:
+
+1. **Crea una presentación más larga** sobre ti
+2. **Haz una calculadora** que sume tu edad + la edad de un familiar
+3. **Escribe un mensaje** para alguien especial
+4. **Experimenta** cambiando todo lo que puedas
+
+## 💭 Reflexiona
+
+Pregúntate:
+
+* ¿Qué fue lo más divertido de hoy?
+* ¿Qué fue lo más fácil?
+* ¿Qué te gustaría aprender después?
+* ¿Qué te sorprendió?
+
+## 🚀 Próxima Clase
+
+En la próxima clase aprenderás sobre **Funciones** - ¡cómo enseñarle nuevos trucos a la computadora!
+
+Va a ser aún más divertido. 🎨
+
+---
+
+## 👨‍👩‍👧‍👦 Nota para Mentores
+
+**Objetivos de esta clase:**
+
+* Familiarización con Livebook
+* Primer contacto con código
+* Vencer el miedo inicial
+* Experimentación libre
+
+**Puntos clave:**
+
+* Celebra cada ejecución exitosa
+* Anima a cambiar valores y experimentar
+* Los errores son normales y valiosos
+* El botón "play" debe ser muy claro
+
+**Tiempo aproximado:**
+
+* Introducción: 10 min
+* Primeros programas: 15 min
+* Números y matemáticas: 10 min
+* Desafíos: 20 min
+* Cierre y reflexión: 5 min
+
+**Si hay tiempo extra:** Más experimentación libre, mostrar sus creaciones, compartir.
+
+---
+
+**¡Felicidades por tu primera clase! 🎉 ¡Eres oficialmente un programador! 💻✨**
+

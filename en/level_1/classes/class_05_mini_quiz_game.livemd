@@ -1,0 +1,150 @@
+# 🎮 Class 5: Mini Quiz Game
+
+```elixir
+Mix.install([
+  {:kino, "~> 0.12.0"}
+])
+```
+
+## 🎯 Objectives
+
+* 🎮 Create an interactive game
+* ❓ Ask questions
+* ✅ Verify answers
+* 🎉 Have fun programming!
+
+## 🎲 Your First Simple Game
+
+```elixir
+Kino.Markdown.new("""
+# 🎮 GUESSING GAME 🎮
+I'm going to think of a number from 1 to 10!
+""")
+```
+
+```elixir
+secret_number = 7
+answer_input = Kino.Input.number("What number am I thinking? (1-10)")
+```
+
+```elixir
+answer_input
+```
+
+```elixir
+answer = Kino.Input.read(answer_input)
+
+if answer == secret_number do
+  Kino.Markdown.new("""
+  <div style="background-color: #4caf50; color: white; padding: 30px; border-radius: 15px; text-align: center;">
+    <h1>🎉 CORRECT! 🎉</h1>
+    <p style="font-size: 24px;">You guessed it! The number was #{secret_number}</p>
+    <p style="font-size: 60px;">🌟</p>
+  </div>
+  """)
+else
+  Kino.Markdown.new("""
+  <div style="background-color: #ff9800; color: white; padding: 30px; border-radius: 15px; text-align: center;">
+    <h1>Almost! 🤔</h1>
+    <p style="font-size: 24px;">The number was #{secret_number}</p>
+    <p>Try again!</p>
+  </div>
+  """)
+end
+```
+
+## 🧠 Question and Answer Game
+
+```elixir
+Kino.Markdown.new("""
+# 🧠 FUN TRIVIA 🧠
+Answer these questions!
+""")
+```
+
+```elixir
+# Question 1
+q1 = Kino.Input.text("What color is the sky?")
+
+# Question 2
+q2 = Kino.Input.number("How many legs does a dog have?")
+
+# Question 3
+q3 = Kino.Input.text("What animal says 'meow'?")
+```
+
+```elixir
+q1
+q2
+q3
+```
+
+```elixir
+a1 = Kino.Input.read(q1)
+a2 = Kino.Input.read(q2)
+a3 = Kino.Input.read(q3)
+
+points = 0
+
+if String.downcase(a1) == "blue", do: points = points + 1
+if a2 == 4, do: points = points + 1
+if String.downcase(a3) == "cat", do: points = points + 1
+
+Kino.Markdown.new("""
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            padding: 40px; border-radius: 20px; color: white; text-align: center;">
+  <h1>🏆 RESULTS 🏆</h1>
+  <h2 style="font-size: 48px;">#{points} / 3</h2>
+  <p style="font-size: 24px;">
+    #{if points == 3, do: "PERFECT! 🌟", else: "Good try! 👍"}
+  </p>
+</div>
+""")
+```
+
+## 🎯 Your Turn: Create Your Game
+
+```elixir
+Kino.Markdown.new("""
+# 🎮 MY CUSTOM GAME 🎮
+Create questions about topics you like!
+""")
+```
+
+```elixir
+# Create your own questions here
+# Example: about animals, sports, movies, etc.
+
+question1 = Kino.Input.text("Your question here")
+```
+
+```elixir
+question1
+```
+
+```elixir
+# Verify answers here
+```
+
+## 🏆 Challenge: Complete Game
+
+Create a game with:
+
+* At least 5 questions
+* Different types (text, numbers)
+* Scoring system
+* Final message depending on points
+
+## 📝 Summary
+
+Today you created:
+
+* ✅ Interactive games
+* ✅ Questions and answers
+* ✅ Conditions (if/else)
+* ✅ Scoring system
+
+---
+
+**You're a game creator! 🎮✨**
+

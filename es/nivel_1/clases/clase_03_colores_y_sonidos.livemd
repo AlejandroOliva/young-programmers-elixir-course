@@ -1,0 +1,319 @@
+# 🎨 Clase 3: Colores y Sonidos - ¡Hagamos Arte!
+
+```elixir
+Mix.install([
+  {:kino, "~> 0.12.0"}
+])
+```
+
+```elixir
+# ¡Hola artista programador! 🎨
+# Hoy vamos a crear cosas hermosas con colores
+```
+
+## 🎯 ¿Qué aprenderás hoy?
+
+Hoy vas a:
+
+* 🌈 Crear colores con código
+* 🎨 Mostrar texto con colores
+* ✨ Hacer diseños visuales
+* 🔊 (Bonus: efectos de sonido si es posible)
+
+## 🌈 Introducción a los Colores
+
+Los colores en las computadoras se hacen mezclando tres colores:
+
+* ❤️ Rojo (Red)
+* 💚 Verde (Green)
+* 💙 Azul (Blue)
+
+¡Por eso se llama RGB!
+
+## 🎨 Tu Primer Color
+
+Vamos a crear algo con color usando Kino:
+
+```elixir
+# Texto rojo
+Kino.Markdown.new("# 🔴 ¡Este texto es especial!") |> Kino.render()
+
+# Texto grande
+Kino.Markdown.new("## Este es más pequeño") |> Kino.render()
+
+# Texto normal
+Kino.Markdown.new("Este es texto normal con emojis 🌟") |> Kino.render()
+```
+
+## 🌟 Colores HTML
+
+Podemos usar colores especiales con HTML:
+
+```elixir
+Kino.Markdown.new("""
+<p style="color: red; font-size: 24px;">¡Texto ROJO! ❤️</p>
+<p style="color: blue; font-size: 24px;">¡Texto AZUL! 💙</p>
+<p style="color: green; font-size: 24px;">¡Texto VERDE! 💚</p>
+""")
+```
+
+### 🎯 Tu turno: Crea tus colores
+
+```elixir
+# Prueba diferentes colores: red, blue, green, yellow, purple, orange, pink
+Kino.Markdown.new("""
+<p style="color: purple; font-size: 30px;">¡Mi color favorito!</p>
+""")
+```
+
+## 🎨 Fondos de Colores
+
+¡También podemos hacer fondos de colores!
+
+```elixir
+Kino.Markdown.new("""
+<div style="background-color: yellow; padding: 20px; border-radius: 10px;">
+  <h2 style="color: black;">🌟 ¡Fondo Amarillo! 🌟</h2>
+  <p style="color: black;">Este es un cuadro con fondo amarillo</p>
+</div>
+""")
+```
+
+### 🎯 Experimenta con fondos
+
+```elixir
+# Cambia el color del fondo y el texto
+Kino.Markdown.new("""
+<div style="background-color: lightblue; padding: 20px; border-radius: 10px;">
+  <h2>Mi Cuadro Especial</h2>
+  <p>Escribe algo aquí...</p>
+</div>
+""")
+```
+
+## 🌈 Crear un Arcoíris
+
+Vamos a crear un arcoíris de texto:
+
+```elixir
+Kino.Markdown.new("""
+<div style="text-align: center; font-size: 24px; font-weight: bold;">
+  <p style="color: red;">🔴 ROJO</p>
+  <p style="color: orange;">🟠 NARANJA</p>
+  <p style="color: yellow;">🟡 AMARILLO</p>
+  <p style="color: green;">🟢 VERDE</p>
+  <p style="color: blue;">🔵 AZUL</p>
+  <p style="color: indigo;">🟣 ÍNDIGO</p>
+  <p style="color: violet;">🟣 VIOLETA</p>
+</div>
+""")
+```
+
+## 🎨 Tarjetas de Colores
+
+Vamos a crear tarjetas bonitas:
+
+```elixir
+nombre = "Tu Nombre"
+color_favorito = "azul"
+edad = 9
+
+Kino.Markdown.new("""
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            padding: 30px; 
+            border-radius: 15px; 
+            color: white;
+            text-align: center;">
+  <h1>🌟 #{nombre} 🌟</h1>
+  <h2>Tengo #{edad} años</h2>
+  <p style="font-size: 20px;">Mi color favorito es #{color_favorito}</p>
+  <p style="font-size: 40px;">😊</p>
+</div>
+""")
+```
+
+### 🎯 Tu turno: Tu tarjeta personal
+
+```elixir
+# Crea tu propia tarjeta
+mi_nombre = "..."
+mi_edad = 0
+mi_color = "..."
+mi_emoji = "😊"
+
+Kino.Markdown.new("""
+<div style="background-color: lightgreen; 
+            padding: 30px; 
+            border-radius: 15px;
+            text-align: center;">
+  <h1>#{mi_nombre}</h1>
+  <h2>#{mi_edad} años</h2>
+  <p>Color favorito: #{mi_color}</p>
+  <p style="font-size: 60px;">#{mi_emoji}</p>
+</div>
+""")
+```
+
+## 🚦 Semáforo
+
+Vamos a crear un semáforo:
+
+```elixir
+Kino.Markdown.new("""
+<div style="background-color: #333; padding: 20px; border-radius: 20px; width: 150px;">
+  <div style="background-color: red; width: 100px; height: 100px; border-radius: 50%; margin: 10px;"></div>
+  <div style="background-color: yellow; width: 100px; height: 100px; border-radius: 50%; margin: 10px;"></div>
+  <div style="background-color: green; width: 100px; height: 100px; border-radius: 50%; margin: 10px;"></div>
+</div>
+""")
+```
+
+## 🎯 Desafío 1: Bandera
+
+Crea una bandera con tres colores:
+
+```elixir
+Kino.Markdown.new("""
+<div>
+  <div style="background-color: red; height: 50px;"></div>
+  <div style="background-color: white; height: 50px;"></div>
+  <div style="background-color: blue; height: 50px;"></div>
+</div>
+""")
+```
+
+## 🏆 Desafío 2: Tu Página Personal
+
+Crea una página sobre ti con colores:
+
+```elixir
+Kino.Markdown.new("""
+<div style="font-family: Arial; max-width: 600px;">
+  <!-- Encabezado -->
+  <div style="background: linear-gradient(90deg, #ff6b6b, #4ecdc4); 
+              padding: 40px; 
+              text-align: center; 
+              color: white; 
+              border-radius: 10px 10px 0 0;">
+    <h1>🌟 Todo Sobre Mí 🌟</h1>
+  </div>
+
+  <!-- Contenido -->
+  <div style="background-color: #f7f7f7; padding: 30px;">
+    <h2 style="color: #ff6b6b;">👋 ¡Hola!</h2>
+    <p>Mi nombre es [TU NOMBRE]</p>
+
+    <h2 style="color: #4ecdc4;">🎨 Mis Favoritos</h2>
+    <ul>
+      <li>Color: [TU COLOR]</li>
+      <li>Animal: [TU ANIMAL]</li>
+      <li>Comida: [TU COMIDA]</li>
+    </ul>
+
+    <h2 style="color: #95e1d3;">💫 Sobre Mí</h2>
+    <p>Tengo [TU EDAD] años y me encanta [TU HOBBY]</p>
+  </div>
+
+  <!-- Pie -->
+  <div style="background-color: #2c3e50; 
+              padding: 20px; 
+              text-align: center; 
+              color: white; 
+              border-radius: 0 0 10px 10px;">
+    <p>¡Gracias por visitarme! 😊</p>
+  </div>
+</div>
+""")
+```
+
+## 🎮 Input Inputs Coloridos
+
+¡También podemos pedir información con colores!
+
+```elixir
+color_input = Kino.Input.text("¿Cuál es tu color favorito?")
+```
+
+```elixir
+color_input
+```
+
+```elixir
+color_elegido = Kino.Input.read(color_input)
+
+Kino.Markdown.new("""
+<div style="background-color: #{color_elegido}; padding: 40px; border-radius: 15px; text-align: center;">
+  <h1 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+    ¡#{color_elegido} es un color genial! 🎨
+  </h1>
+</div>
+""")
+```
+
+## 🌟 Galería de Emojis Coloridos
+
+```elixir
+Kino.Markdown.new("""
+<div style="display: flex; justify-content: space-around; padding: 20px;">
+  <div style="background-color: #ffcccb; padding: 20px; border-radius: 10px; text-align: center;">
+    <div style="font-size: 50px;">❤️</div>
+    <p>Amor</p>
+  </div>
+  <div style="background-color: #add8e6; padding: 20px; border-radius: 10px; text-align: center;">
+    <div style="font-size: 50px;">😊</div>
+    <p>Feliz</p>
+  </div>
+  <div style="background-color: #90ee90; padding: 20px; border-radius: 10px; text-align: center;">
+    <div style="font-size: 50px;">🌟</div>
+    <p>Estrella</p>
+  </div>
+</div>
+""")
+```
+
+## 🏆 Desafío Final: Crea Arte
+
+Combina todo lo que aprendiste para crear tu propia obra de arte digital:
+
+```elixir
+# ¡Aquí va tu arte!
+# Usa colores, formas, emojis, texto... ¡todo lo que quieras!
+
+Kino.Markdown.new("""
+<!-- Tu arte aquí -->
+""")
+```
+
+## 📝 Resumen de Hoy
+
+¡Hoy fuiste un verdadero artista digital! 🎨
+
+Aprendiste:
+
+* ✅ Cómo usar colores en tus programas
+* ✅ Crear texto con colores
+* ✅ Hacer fondos de colores
+* ✅ Crear tarjetas y diseños
+* ✅ Combinar colores y código
+
+## 🎯 Práctica Extra
+
+1. **Crea una tarjeta** de cumpleaños colorida
+2. **Diseña un póster** sobre tu animal favorito
+3. **Haz un semáforo** que cambie de color
+4. **Crea tu propio arcoíris** con diferentes emojis
+
+## 💭 Reflexiona
+
+* ¿Qué colores te gustaron más?
+* ¿Qué fue lo más creativo que hiciste?
+* ¿Qué más te gustaría crear con colores?
+
+## 🚀 Próxima Clase
+
+En la próxima clase aprenderemos más sobre **Variables y Mensajes** - ¡cómo guardar y usar información de forma más avanzada! 📦💬
+
+---
+
+**¡Eres un artista del código! 🎨✨ Sigue creando cosas hermosas. 🌈**
+

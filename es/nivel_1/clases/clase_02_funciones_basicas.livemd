@@ -1,0 +1,432 @@
+# 🎪 Clase 2: Funciones Básicas - Enseñando Trucos Nuevos
+
+```elixir
+# ¡Bienvenido de vuelta, programador! 🌟
+# Hoy aprenderemos algo SÚPER COOL: ¡Funciones!
+```
+
+## 🎯 ¿Qué aprenderás hoy?
+
+Hoy descubrirás:
+
+* 🎪 Qué es una función (¡como un truco de magia!)
+* 🎨 Cómo crear tus propias funciones
+* 🔄 Cómo usar funciones una y otra vez
+* 🎁 Cómo darle información a una función
+
+## 🤔 ¿Qué es una Función?
+
+Imagina que le enseñas un truco a tu perro. Por ejemplo: "dame la pata".
+
+Cada vez que dices "dame la pata", tu perro hace el truco.
+
+**¡Las funciones son iguales!** Le enseñas un "truco" a la computadora, le pones un nombre, y luego puedes pedirle que lo haga cuando quieras.
+
+## 👋 Funciones que Ya Conoces
+
+¿Recuerdas `IO.puts()`? ¡Esa es una función!
+
+```elixir
+# IO.puts es una función que ya existe
+# Alguien la creó para que nosotros la usemos
+
+IO.puts("¡Las funciones son geniales!")
+```
+
+## 🎨 Crear Tu Primera Función
+
+Vamos a crear una función que diga "¡Hola!" cada vez que la llamemos:
+
+```elixir
+defmodule MisPrimerosTrucos do
+  def saludar do
+    IO.puts("¡Hola! 👋")
+    IO.puts("¿Cómo estás?")
+  end
+end
+
+# Ahora "llamamos" a nuestra función (le pedimos que haga el truco)
+MisPrimerosTrucos.saludar()
+```
+
+### 🎉 ¿Qué acabó de pasar?
+
+* `defmodule MisPrimerosTrucos do` = Creamos una "caja" para guardar nuestros trucos
+* `def saludar do` = Le enseñamos un nuevo truco llamado "saludar"
+* Entre `do` y `end` ponemos lo que queremos que haga
+* `MisPrimerosTrucos.saludar()` = Le pedimos que haga el truco
+
+### 🎯 Ahora tú: Personaliza el saludo
+
+```elixir
+defmodule MisTrucos do
+  def saludar do
+    # Cambia estos mensajes por los que tú quieras
+    IO.puts("¡Hola!")
+    IO.puts("Soy un programador")
+  end
+end
+
+MisTrucos.saludar()
+```
+
+## 🔄 La Magia de Reutilizar
+
+¡Lo mejor de las funciones es que puedes usarlas muchas veces!
+
+```elixir
+defmodule Animales do
+  def ladrar do
+    IO.puts("¡Guau guau! 🐕")
+  end
+
+  def maullar do
+    IO.puts("¡Miau miau! 🐱")
+  end
+end
+
+# Podemos llamarlas cuantas veces queramos
+Animales.ladrar()
+Animales.maullar()
+Animales.ladrar()
+Animales.ladrar()
+Animales.maullar()
+```
+
+### 🎮 Tu turno: Crea sonidos de animales
+
+```elixir
+defmodule MisAnimales do
+  def perro do
+    # Tu código aquí
+  end
+
+  def gato do
+    # Tu código aquí
+  end
+
+  def pajaro do
+    # Tu código aquí
+  end
+end
+
+# Llama a tus funciones aquí
+MisAnimales.perro()
+```
+
+## 🎁 Funciones con Información (Parámetros)
+
+A veces queremos que nuestra función use información que le damos. ¡Como darle instrucciones específicas!
+
+```elixir
+defmodule Saludador do
+  def saludar_a(nombre) do
+    IO.puts("¡Hola, #{nombre}! 🌟")
+    IO.puts("¡Qué alegría verte!")
+  end
+end
+
+# Ahora podemos saludar a diferentes personas
+Saludador.saludar_a("María")
+Saludador.saludar_a("Pedro")
+Saludador.saludar_a("tu nombre aquí")
+```
+
+### 💫 ¿Qué es ese `nombre`?
+
+* `nombre` es un **parámetro** - como un espacio en blanco que llenamos
+* Cuando llamamos `saludar_a("María")`, `nombre` se convierte en "María"
+* Es como una caja temporal que guarda lo que le damos
+
+### 🎯 Tu turno: Saluda a tus amigos
+
+```elixir
+defmodule MiSaludador do
+  def saludar_amigo(nombre) do
+    # Crea un saludo especial usando #{nombre}
+    IO.puts("¡Hola, #{nombre}!")
+    # Agrega más líneas...
+  end
+end
+
+# Saluda a 3 de tus amigos o familiares
+MiSaludador.saludar_amigo("...")
+```
+
+## 🎂 Funciones con Más de un Parámetro
+
+¡Puedes darle más de una información a una función!
+
+```elixir
+defmodule Presentador do
+  def presentar(nombre, edad) do
+    IO.puts("Mi nombre es #{nombre}")
+    IO.puts("Tengo #{edad} años")
+  end
+end
+
+Presentador.presentar("Ana", 9)
+Presentador.presentar("Luis", 8)
+```
+
+### 🎨 Más ejemplos divertidos
+
+```elixir
+defmodule SuperCalculadora do
+  def sumar(numero1, numero2) do
+    resultado = numero1 + numero2
+    IO.puts("#{numero1} + #{numero2} = #{resultado}")
+  end
+
+  def multiplicar(numero1, numero2) do
+    resultado = numero1 * numero2
+    IO.puts("#{numero1} × #{numero2} = #{resultado}")
+  end
+end
+
+SuperCalculadora.sumar(5, 3)
+SuperCalculadora.multiplicar(4, 7)
+```
+
+### 🎯 Tu turno: Tu propia calculadora
+
+```elixir
+defmodule MiCalculadora do
+  def sumar(a, b) do
+    # Tu código aquí
+  end
+
+  def restar(a, b) do
+    # Tu código aquí
+  end
+
+  def multiplicar(a, b) do
+    # Tu código aquí
+  end
+end
+
+# Prueba tu calculadora
+MiCalculadora.sumar(10, 5)
+MiCalculadora.restar(10, 5)
+MiCalculadora.multiplicar(10, 5)
+```
+
+## 🎪 Función que Devuelve Algo
+
+Las funciones pueden devolvernos un resultado que podemos guardar:
+
+```elixir
+defmodule Matematicas do
+  def duplicar(numero) do
+    numero * 2
+  end
+
+  def edad_en_5_anos(edad_actual) do
+    edad_actual + 5
+  end
+end
+
+# Guardamos el resultado en una variable
+mi_edad = 9
+mi_edad_futura = Matematicas.edad_en_5_anos(mi_edad)
+
+IO.puts("Ahora tengo #{mi_edad} años")
+IO.puts("En 5 años tendré #{mi_edad_futura} años")
+```
+
+## 🏆 Desafío 1: Robot Personal
+
+Crea un robot que pueda hacer varias cosas. Tu robot debe tener al menos 3 funciones diferentes.
+
+```elixir
+defmodule MiRobot do
+  def presentarse do
+    IO.puts("¡Beep boop! Soy un robot 🤖")
+    # Agrega más...
+  end
+
+  def contar_hasta(numero) do
+    # El robot cuenta hasta el número que le des
+    # Por ahora solo muestra el número final
+    IO.puts("¡Beep! Conté hasta #{numero}")
+  end
+
+  def despedirse do
+    # Tu código de despedida
+  end
+end
+
+# Usa tu robot
+MiRobot.presentarse()
+MiRobot.contar_hasta(10)
+MiRobot.despedirse()
+```
+
+## 🏆 Desafío 2: Generador de Historias
+
+Crea una función que genere historias con los nombres y cosas que tú le des:
+
+```elixir
+defmodule GeneradorHistorias do
+  def historia_de_aventura(heroe, villano, lugar) do
+    IO.puts("🌟 LA GRAN AVENTURA 🌟")
+    IO.puts("")
+    IO.puts("Había una vez un héroe llamado #{heroe}.")
+    IO.puts("#{heroe} tenía que salvar #{lugar}.")
+    # Continúa la historia...
+    IO.puts("Y así #{heroe} venció a #{villano}.")
+    IO.puts("¡Fin! 🎉")
+  end
+end
+
+# Crea diferentes historias
+GeneradorHistorias.historia_de_aventura("SuperGato", "Dr. Malvado", "la ciudad")
+```
+
+### 🎯 Tu turno: Tu historia
+
+```elixir
+defmodule MisHistorias do
+  def mi_historia(personaje1, personaje2, objeto_magico) do
+    # Crea tu propia historia usando estos elementos
+  end
+end
+
+# Cuenta tu historia
+MisHistorias.mi_historia("...", "...", "...")
+```
+
+## 🎨 Desafío 3: Creador de Mensajes
+
+Crea funciones que compongan diferentes tipos de mensajes:
+
+```elixir
+defmodule CreadorMensajes do
+  def cumpleanos(nombre, edad) do
+    IO.puts("🎂 ¡FELIZ CUMPLEAÑOS! 🎂")
+    IO.puts("#{nombre}, hoy cumples #{edad} años")
+    IO.puts("¡Que tengas un día increíble! 🎉")
+  end
+
+  def buenas_noches(nombre) do
+    IO.puts("🌙 Buenas noches, #{nombre}")
+    IO.puts("¡Que tengas dulces sueños! ✨")
+  end
+end
+
+# Pruébalas
+CreadorMensajes.cumpleanos("María", 9)
+CreadorMensajes.buenas_noches("Pedro")
+```
+
+### 🎯 Agrega tus propios mensajes
+
+```elixir
+defmodule MisMensajes do
+  # Agrega funciones para:
+  # - Felicitar por una buena nota
+  # - Animar a alguien que está triste
+  # - Celebrar una victoria
+  # - Lo que quieras...
+end
+```
+
+## 🌈 Desafío Extra: Combina Funciones
+
+Las funciones pueden llamar a otras funciones. ¡Es como hacer trucos combinados!
+
+```elixir
+defmodule FiestaDeCumpleanos do
+  def cantar_cumpleanos(nombre) do
+    IO.puts("♪ Cumpleaños feliz ♪")
+    IO.puts("♪ Cumpleaños feliz ♪")
+    IO.puts("♪ Te deseamos #{nombre} ♪")
+    IO.puts("♪ Cumpleaños feliz ♪")
+  end
+
+  def aplaudir do
+    IO.puts("👏 👏 👏 👏 👏")
+  end
+
+  def fiesta_completa(nombre, edad) do
+    IO.puts("🎉🎈🎊 ¡HORA DE LA FIESTA! 🎊🎈🎉")
+    IO.puts("")
+    cantar_cumpleanos(nombre)
+    IO.puts("")
+    IO.puts("¡#{nombre} cumple #{edad} años!")
+    aplaudir()
+    IO.puts("")
+    IO.puts("🎂🍰🧁 ¡A COMER PASTEL! 🧁🍰🎂")
+  end
+end
+
+# ¡Una fiesta completa en código!
+FiestaDeCumpleanos.fiesta_completa("Ana", 9)
+```
+
+## 📝 Resumen de Hoy
+
+¡Mira todo lo increíble que aprendiste! 🌟
+
+Hoy descubriste:
+
+* ✅ Qué son las funciones (trucos que le enseñamos a la computadora)
+* ✅ Cómo crear funciones con `def nombre do ... end`
+* ✅ Cómo usar `defmodule` para organizar tus funciones
+* ✅ Cómo llamar funciones una y otra vez
+* ✅ Cómo darle información a las funciones (parámetros)
+* ✅ Que las funciones pueden usar otras funciones
+
+## 🎯 Práctica Extra
+
+Si quieres seguir practicando:
+
+1. **Crea un zoo virtual:** Funciones para cada animal con sus sonidos
+2. **Calculadora super:** Más operaciones matemáticas
+3. **Generador de chistes:** Funciones que cuenten chistes
+4. **Traductor simple:** Funciones que "traduzcan" palabras
+
+## 💭 Reflexiona
+
+* ¿Qué función fue más divertida de crear?
+* ¿Entiendes para qué sirven los parámetros?
+* ¿Qué más te gustaría que una función pudiera hacer?
+
+## 🚀 Próxima Clase
+
+En la próxima clase aprenderemos sobre **Colores y Sonidos** - ¡vamos a hacer programas aún más visuales y divertidos! 🎨🔊
+
+---
+
+## 👨‍👩‍👧‍👦 Nota para Mentores
+
+**Objetivos:**
+
+* Comprender funciones como "recetas" reutilizables
+* Práctica con parámetros
+* Modularización básica
+
+**Conceptos clave:**
+
+* `defmodule` / `def` / `do...end`
+* Llamar funciones vs. definirlas
+* Parámetros como espacios que llenamos
+
+**Tiempo sugerido:**
+
+* Introducción y primeras funciones: 15 min
+* Funciones con parámetros: 15 min
+* Desafíos: 25 min
+* Cierre: 5 min
+
+**Atención:**
+
+* La sintaxis puede ser confusa al inicio
+* Enfatiza el concepto sobre la sintaxis
+* Usa analogías constantes (recetas, trucos de mascota)
+* Celebra cada función que funcione
+
+---
+
+**¡Excelente trabajo! Ahora puedes enseñarle nuevos trucos a la computadora. 🎪✨**
+

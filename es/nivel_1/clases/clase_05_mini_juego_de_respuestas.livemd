@@ -1,0 +1,150 @@
+# 🎮 Clase 5: Mini Juego de Respuestas
+
+```elixir
+Mix.install([
+  {:kino, "~> 0.12.0"}
+])
+```
+
+## 🎯 Objetivos
+
+* 🎮 Crear un juego interactivo
+* ❓ Hacer preguntas
+* ✅ Verificar respuestas
+* 🎉 ¡Divertirse programando!
+
+## 🎲 Tu Primer Juego Simple
+
+```elixir
+Kino.Markdown.new("""
+# 🎮 JUEGO DE ADIVINANZA 🎮
+¡Voy a pensar en un número del 1 al 10!
+""")
+```
+
+```elixir
+numero_secreto = 7
+respuesta_input = Kino.Input.number("¿Qué número estoy pensando? (1-10)")
+```
+
+```elixir
+respuesta_input
+```
+
+```elixir
+respuesta = Kino.Input.read(respuesta_input)
+
+if respuesta == numero_secreto do
+  Kino.Markdown.new("""
+  <div style="background-color: #4caf50; color: white; padding: 30px; border-radius: 15px; text-align: center;">
+    <h1>🎉 ¡CORRECTO! 🎉</h1>
+    <p style="font-size: 24px;">¡Adivinaste! El número era #{numero_secreto}</p>
+    <p style="font-size: 60px;">🌟</p>
+  </div>
+  """)
+else
+  Kino.Markdown.new("""
+  <div style="background-color: #ff9800; color: white; padding: 30px; border-radius: 15px; text-align: center;">
+    <h1>¡Casi! 🤔</h1>
+    <p style="font-size: 24px;">El número era #{numero_secreto}</p>
+    <p>¡Inténtalo de nuevo!</p>
+  </div>
+  """)
+end
+```
+
+## 🧠 Juego de Preguntas y Respuestas
+
+```elixir
+Kino.Markdown.new("""
+# 🧠 TRIVIA DIVERTIDA 🧠
+¡Responde estas preguntas!
+""")
+```
+
+```elixir
+# Pregunta 1
+p1 = Kino.Input.text("¿De qué color es el cielo?")
+
+# Pregunta 2
+p2 = Kino.Input.number("¿Cuántas patas tiene un perro?")
+
+# Pregunta 3
+p3 = Kino.Input.text("¿Qué animal dice 'miau'?")
+```
+
+```elixir
+p1
+p2
+p3
+```
+
+```elixir
+r1 = Kino.Input.read(p1)
+r2 = Kino.Input.read(p2)
+r3 = Kino.Input.read(p3)
+
+puntos = 0
+
+if String.downcase(r1) == "azul", do: puntos = puntos + 1
+if r2 == 4, do: puntos = puntos + 1
+if String.downcase(r3) == "gato", do: puntos = puntos + 1
+
+Kino.Markdown.new("""
+<div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            padding: 40px; border-radius: 20px; color: white; text-align: center;">
+  <h1>🏆 RESULTADOS 🏆</h1>
+  <h2 style="font-size: 48px;">#{puntos} / 3</h2>
+  <p style="font-size: 24px;">
+    #{if puntos == 3, do: "¡PERFECTO! 🌟", else: "¡Buen intento! 👍"}
+  </p>
+</div>
+""")
+```
+
+## 🎯 Tu Turno: Crea Tu Juego
+
+```elixir
+Kino.Markdown.new("""
+# 🎮 MI JUEGO PERSONALIZADO 🎮
+¡Crea preguntas sobre temas que te gusten!
+""")
+```
+
+```elixir
+# Crea tus propias preguntas aquí
+# Ejemplo: sobre animales, deportes, películas, etc.
+
+pregunta1 = Kino.Input.text("Tu pregunta aquí")
+```
+
+```elixir
+pregunta1
+```
+
+```elixir
+# Verifica las respuestas aquí
+```
+
+## 🏆 Desafío: Juego Completo
+
+Crea un juego con:
+
+* Al menos 5 preguntas
+* Diferentes tipos (texto, números)
+* Sistema de puntuación
+* Mensaje final dependiendo de los puntos
+
+## 📝 Resumen
+
+Hoy creaste:
+
+* ✅ Juegos interactivos
+* ✅ Preguntas y respuestas
+* ✅ Condiciones (if/else)
+* ✅ Sistema de puntuación
+
+---
+
+**¡Eres un creador de juegos! 🎮✨**
+
