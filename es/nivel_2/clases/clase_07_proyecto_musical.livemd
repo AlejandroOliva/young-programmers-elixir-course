@@ -1,0 +1,66 @@
+# 🎵 Clase 7: Proyecto Musical
+
+```elixir
+Mix.install([{:kino, "~> 0.12.0"}])
+```
+
+## 🎯 Objetivos
+
+* 🎵 Crear secuencias y ritmos
+* 🎹 Trabajar con patrones repetitivos
+* 🎨 Proyecto creativo musical
+
+## 🎹 Notas Musicales
+
+```elixir
+notas = ["Do", "Re", "Mi", "Fa", "Sol", "La", "Si"]
+
+Enum.each(notas, fn nota ->
+  IO.puts("♪ #{nota} ♪")
+  Process.sleep(300)
+end)
+```
+
+## 🎵 Secuencia Musical
+
+```elixir
+cancion = ["Do", "Mi", "Sol", "Mi", "Do"]
+
+Kino.animate(0, fn indice ->
+  if indice < length(cancion) do
+    nota = Enum.at(cancion, indice)
+
+    frame = Kino.Markdown.new("""
+    <div style="background-color: #6c5ce7; padding: 50px; text-align: center; color: white; border-radius: 15px;">
+      <h1 style="font-size: 100px;">♪</h1>
+      <h2 style="font-size: 60px;">#{nota}</h2>
+    </div>
+    """)
+
+    Process.sleep(600)
+    {:cont, frame, indice + 1}
+  else
+    {:halt, Kino.Markdown.new("🎉 ¡Canción terminada!")}
+  end
+end)
+```
+
+## 🎯 Tu Turno: Tu Melodía
+
+Crea tu propia secuencia musical.
+
+```elixir
+# Tu melodía aquí
+mi_cancion = ["...", "...", "..."]
+```
+
+## 📝 Resumen
+
+* ✅ Secuencias musicales
+* ✅ Patrones y ritmos
+* ✅ Animaciones musicales
+
+---
+
+**¡Eres un compositor de código! 🎵✨**
+

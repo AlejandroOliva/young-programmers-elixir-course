@@ -1,0 +1,68 @@
+# 💬 Clase 6: Mensajes y Respuestas
+
+```elixir
+Mix.install([{:kino, "~> 0.12.0"}])
+```
+
+## 🎯 Objetivos
+
+* 💬 Crear conversaciones interactivas
+* 🤖 Simular un chatbot simple
+* 🎨 Respuestas personalizadas
+
+## 🤖 Chatbot Simple
+
+```elixir
+defmodule ChatBot do
+  def responder(mensaje) do
+    cond do
+      String.contains?(String.downcase(mensaje), "hola") ->
+        "¡Hola! ¿Cómo estás?"
+
+      String.contains?(String.downcase(mensaje), "bien") ->
+        "¡Me alegro! ¿En qué puedo ayudarte?"
+
+      String.contains?(String.downcase(mensaje), "adiós") ->
+        "¡Hasta luego! 👋"
+
+      true ->
+        "Interesante... cuéntame más."
+    end
+  end
+end
+
+ChatBot.responder("Hola robot")
+```
+
+## 🎯 Tu Turno
+
+```elixir
+mensaje_input = Kino.Input.text("Escribe un mensaje")
+```
+
+```elixir
+mensaje_input
+```
+
+```elixir
+mensaje = Kino.Input.read(mensaje_input)
+respuesta = ChatBot.responder(mensaje)
+
+Kino.Markdown.new("""
+<div style="background-color: #e3f2fd; padding: 30px; border-radius: 15px;">
+  <p><strong>Tú:</strong> #{mensaje}</p>
+  <p><strong>Bot:</strong> #{respuesta}</p>
+</div>
+""")
+```
+
+## 📝 Resumen
+
+* ✅ Chatbots simples
+* ✅ String.contains
+* ✅ Respuestas condicionales
+
+---
+
+**¡Creaste un asistente virtual! 💬✨**
+

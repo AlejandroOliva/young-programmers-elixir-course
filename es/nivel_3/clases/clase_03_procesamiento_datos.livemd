@@ -1,0 +1,82 @@
+# 📊 Clase 3: Procesamiento de Datos
+
+```elixir
+Mix.install([{:kino, "~> 0.12.0"}])
+```
+
+## 🎯 Objetivos
+
+* 📊 Enum avanzado (filter, reduce)
+* ⚡ Pipe operator |>
+* 🎯 Transformaciones de datos
+
+## 🔍 Enum.filter - Filtrar Elementos
+
+```elixir
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+pares = Enum.filter(numeros, fn n -> rem(n, 2) == 0 end)
+
+IO.inspect(pares)
+```
+
+## ⚡ Pipe Operator |>
+
+El pipe operator hace el código más legible:
+
+```elixir
+# Sin pipe
+resultado = Enum.sum(Enum.map(Enum.filter([1, 2, 3, 4, 5], fn x -> x > 2 end), fn x -> x * 2 end))
+
+# Con pipe (mucho más claro)
+resultado =
+  [1, 2, 3, 4, 5]
+  |> Enum.filter(fn x -> x > 2 end)
+  |> Enum.map(fn x -> x * 2 end)
+  |> Enum.sum()
+
+IO.puts(resultado)
+```
+
+## 🎯 Enum.reduce - Acumular Valores
+
+```elixir
+numeros = [1, 2, 3, 4, 5]
+
+suma = Enum.reduce(numeros, 0, fn numero, acumulador ->
+  acumulador + numero
+end)
+
+IO.puts("Suma total: #{suma}")
+```
+
+## 🏆 Desafío: Procesador de Datos
+
+```elixir
+estudiantes = [
+  %{nombre: "Ana", nota: 95},
+  %{nombre: "Pedro", nota: 78},
+  %{nombre: "María", nota: 88},
+  %{nombre: "Luis", nota: 65}
+]
+
+# Filtrar aprobados (>= 70), obtener nombres
+aprobados =
+  estudiantes
+  |> Enum.filter(fn e -> e.nota >= 70 end)
+  |> Enum.map(fn e -> e.nombre end)
+
+IO.puts("Aprobados: #{Enum.join(aprobados, ", ")}")
+```
+
+## 📝 Resumen
+
+* ✅ Enum.filter
+* ✅ Enum.reduce
+* ✅ Pipe operator |>
+* ✅ Transformaciones encadenadas
+
+---
+
+**¡Procesas datos como un profesional! 📊✨**
+

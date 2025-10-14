@@ -1,0 +1,55 @@
+# 🌟 Class 10: Final Project
+
+```elixir
+Mix.install([{:kino, "~> 0.12.0"}])
+```
+
+## 🎯 The Grand Project
+
+Create your Level 2 final project!
+
+### Requirements
+
+✅ Conditional logic (if/else/cond)
+✅ At least one loop (Enum)
+✅ Pattern matching in functions
+✅ Maps or data structures
+✅ Interactivity (Kino.Input)
+✅ Visual design
+
+## 💡 Ideas
+
+* 🎮 Adventure game with inventory
+* 📊 Personal data analyzer
+* 🤖 Smart chatbot
+* 🎨 Interactive art generator
+* 📖 Story with multiple endings
+
+## 🎨 Space for Your Project
+
+```elixir
+# 🌟 MY FINAL PROJECT - LEVEL 2 🌟
+# Created by: [Your Name]
+```
+
+```elixir
+# Your code here
+```
+
+## 🏆 Congratulations!
+
+By completing this project:
+
+✅ You master conditional logic
+✅ You know how to work with collections
+✅ You create complex programs
+✅ You use data structures
+
+## 🚀 What's Next?
+
+**Level 3:** Recursion, terminal, and advanced programming
+
+---
+
+**YOU COMPLETED LEVEL 2! 🎓🌟**
+

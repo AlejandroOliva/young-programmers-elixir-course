@@ -1,0 +1,65 @@
+# 📊 Clase 2: Estructuras de Datos Avanzadas
+
+```elixir
+Mix.install([{:kino, "~> 0.12.0"}])
+```
+
+## 🎯 Objetivos
+
+* 📊 Maps avanzados
+* 🔑 Keyword lists
+* 🎁 Tuplas complejas
+
+## 🗺️ Maps Anidados
+
+```elixir
+escuela = %{
+  nombre: "Escuela de Programación",
+  estudiantes: [
+    %{nombre: "Ana", edad: 12, nivel: 3},
+    %{nombre: "Pedro", edad: 13, nivel: 3}
+  ],
+  cursos: %{
+    elixir: %{nivel: 3, duracion: "10 semanas"},
+    python: %{nivel: 2, duracion: "8 semanas"}
+  }
+}
+
+# Acceder a datos anidados
+IO.puts("Primer estudiante: #{hd(escuela.estudiantes).nombre}")
+IO.puts("Duración Elixir: #{escuela.cursos.elixir.duracion}")
+```
+
+## 🔑 Keyword Lists
+
+```elixir
+opciones = [nombre: "Mi App", version: "1.0", debug: true]
+
+IO.inspect(opciones)
+IO.puts("Nombre: #{opciones[:nombre]}")
+```
+
+## 🎯 Tu Turno
+
+Crea tu perfil de programador con datos anidados.
+
+```elixir
+mi_perfil = %{
+  info: %{nombre: "...", edad: 0},
+  habilidades: ["Elixir", "..."],
+  proyectos: [
+    %{nombre: "...", nivel: 1}
+  ]
+}
+```
+
+## 📝 Resumen
+
+* ✅ Datos anidados
+* ✅ Keyword lists
+* ✅ Estructuras complejas
+
+---
+
+**¡Manejas datos avanzados! 📊✨**
+

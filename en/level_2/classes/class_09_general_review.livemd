@@ -1,0 +1,52 @@
+# 🔄 Class 9: General Review
+
+```elixir
+Mix.install([{:kino, "~> 0.12.0"}])
+```
+
+## 🎯 Objectives
+
+* 📚 Review all Level 2 concepts
+* 🏆 Complete integrating challenges
+* 🌟 Prepare for final project
+
+## 📖 What Have We Learned?
+
+* ✅ If/else and conditional logic
+* ✅ Functions with pattern matching
+* ✅ Enum.each and Enum.map
+* ✅ Animations with Kino
+* ✅ Maps and data structures
+
+## 🎮 Integrating Challenge
+
+Create a program that:
+- Uses at least 3 concepts from the level
+- Has interactivity
+- Shows visual results
+- Is creative
+
+```elixir
+# Your integrating project here
+```
+
+## 💭 Self-Evaluation
+
+Can I...?
+- [ ] Use if/else and cond correctly
+- [ ] Create functions with pattern matching
+- [ ] Iterate over lists with Enum
+- [ ] Work with Maps
+- [ ] Create animations
+- [ ] Combine all of the above
+
+## 📝 Summary
+
+* ✅ Complete level review
+* ✅ Integrating challenges
+* ✅ Preparation for final project
+
+---
+
+**You're almost done with Level 2! 🌟**
+

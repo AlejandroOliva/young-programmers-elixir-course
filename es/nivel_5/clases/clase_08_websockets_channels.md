@@ -1,0 +1,26 @@
+# 🔄 Clase 8: WebSockets y Channels
+
+## 🎯 Comunicación Real-Time
+
+```elixir
+# Channel
+defmodule MyAppWeb.RoomChannel do
+  use Phoenix.Channel
+
+  def join("room:lobby", _message, socket) do
+    {:ok, socket}
+  end
+
+  def handle_in("new_msg", %{"body" => body}, socket) do
+    broadcast!(socket, "new_msg", %{body: body})
+    {:noreply, socket}
+  end
+end
+```
+
+Proyectos: Chat, collaborative tools, live updates.
+
+---
+
+**¡Comunicación real-time! 🔄✨**
+

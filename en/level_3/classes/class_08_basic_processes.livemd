@@ -1,0 +1,61 @@
+# 🔄 Class 8: Basic Processes
+
+```elixir
+# Introduction to processes and concurrency
+```
+
+## 🎯 Objectives
+
+* 🔄 Understand what processes are
+* 📨 Send and receive messages
+* ⚡ Basic concurrency
+
+## 🔄 What is a Process?
+
+In Elixir, processes are independent units that can execute in parallel.
+
+## 📨 Send Messages
+
+```elixir
+# Create a process that receives messages
+pid = spawn(fn ->
+  receive do
+    {:greeting, name} ->
+      IO.puts("Hello, #{name}!")
+  end
+end)
+
+# Send message
+send(pid, {:greeting, "Programmer"})
+Process.sleep(100)
+```
+
+## 🎯 Process that Responds
+
+```elixir
+parent = self()
+
+spawn(fn ->
+  receive do
+    {:question, question} ->
+      response = "I received: #{question}"
+      send(parent, {:response, response})
+  end
+end)
+|> send({:question, "How are you?"})
+
+receive do
+  {:response, msg} -> IO.puts(msg)
+end
+```
+
+## 📝 Summary
+
+* ✅ Basic processes
+* ✅ spawn, send, receive
+* ✅ Simple concurrency
+
+---
+
+**You understand processes! 🔄✨**
+

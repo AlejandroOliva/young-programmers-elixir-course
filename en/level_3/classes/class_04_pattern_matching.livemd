@@ -1,0 +1,77 @@
+# 🔀 Class 4: Advanced Pattern Matching
+
+```elixir
+Mix.install([{:kino, "~> 0.12.0"}])
+```
+
+## 🎯 Objectives
+
+* 🔀 Advanced pattern matching
+* 📦 Destructuring structures
+* ✨ Matching in lists and maps
+
+## 🎯 Matching in Lists
+
+```elixir
+# Separate head and tail
+[head | tail] = [1, 2, 3, 4, 5]
+
+IO.puts("Head: #{head}")
+IO.inspect(tail, label: "Tail")
+```
+
+## 🗺️ Matching in Maps
+
+```elixir
+person = %{name: "Ana", age: 12, city: "Madrid"}
+
+# Extract only what you need
+%{name: n, age: a} = person
+
+IO.puts("#{n} is #{a} years old")
+```
+
+## 🎯 Functions with Pattern Matching
+
+```elixir
+defmodule Processor do
+  def process({:ok, value}) do
+    "Success: #{value}"
+  end
+
+  def process({:error, reason}) do
+    "Error: #{reason}"
+  end
+
+  def process(_), do: "Unknown format"
+end
+
+Processor.process({:ok, "All good"})
+Processor.process({:error, "Something failed"})
+```
+
+## 🏆 Challenge
+
+```elixir
+defmodule Analyzer do
+  def analyze([]), do: "Empty list"
+  def analyze([single]), do: "One element: #{single}"
+  def analyze([first, second | _rest]), do: "Starts with #{first} and #{second}"
+end
+
+Analyzer.analyze([])
+Analyzer.analyze([1])
+Analyzer.analyze([1, 2, 3, 4])
+```
+
+## 📝 Summary
+
+* ✅ Pattern matching in lists
+* ✅ Pattern matching in maps
+* ✅ Matching in functions
+* ✅ Destructuring
+
+---
+
+**You master pattern matching! 🔀✨**
+

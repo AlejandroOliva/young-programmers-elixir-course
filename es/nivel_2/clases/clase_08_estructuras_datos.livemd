@@ -1,0 +1,71 @@
+# 📊 Clase 8: Estructuras de Datos
+
+```elixir
+Mix.install([{:kino, "~> 0.12.0"}])
+```
+
+## 🎯 Objetivos
+
+* 📊 Entender Maps (mapas/diccionarios)
+* 🎁 Trabajar con tuplas
+* 🗂️ Organizar datos complejos
+
+## 🗺️ Maps - Como un Diccionario
+
+```elixir
+persona = %{
+  nombre: "Ana",
+  edad: 10,
+  color_favorito: "azul"
+}
+
+IO.puts("Nombre: #{persona.nombre}")
+IO.puts("Edad: #{persona.edad}")
+IO.puts("Color favorito: #{persona.color_favorito}")
+```
+
+## 🎁 Tuplas - Grupos Ordenados
+
+```elixir
+coordenadas = {10, 20}
+{x, y} = coordenadas
+
+IO.puts("X: #{x}, Y: #{y}")
+```
+
+## 🎯 Tu Turno
+
+```elixir
+mi_perfil = %{
+  nombre: "Tu nombre",
+  edad: 0,
+  hobbies: ["...", "...", "..."],
+  favorito: %{
+    color: "...",
+    animal: "..."
+  }
+}
+
+Kino.Markdown.new("""
+# #{mi_perfil.nombre}
+
+**Edad:** #{mi_perfil.edad}
+
+**Hobbies:** #{Enum.join(mi_perfil.hobbies, ", ")}
+
+**Favoritos:**
+- Color: #{mi_perfil.favorito.color}
+- Animal: #{mi_perfil.favorito.animal}
+""")
+```
+
+## 📝 Resumen
+
+* ✅ Maps para datos estructurados
+* ✅ Tuplas para grupos
+* ✅ Datos anidados
+
+---
+
+**¡Organizas datos como un profesional! 📊✨**
+

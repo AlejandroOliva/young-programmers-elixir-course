@@ -1,0 +1,63 @@
+# 🎬 Clase 5: Animaciones con Kino
+
+```elixir
+Mix.install([{:kino, "~> 0.12.0"}])
+```
+
+## 🎯 Objetivos
+
+* 🎬 Crear animaciones simples
+* ⏱️ Trabajar con tiempo y secuencias
+* ✨ Hacer programas dinámicos
+
+## 🎬 Tu Primera Animación
+
+```elixir
+Kino.animate(0, fn contador ->
+  frame = Kino.Markdown.new("""
+  <div style="background-color: #667eea; padding: 40px; text-align: center; color: white; border-radius: 15px;">
+    <h1 style="font-size: 80px;">#{contador}</h1>
+    <p>Contador animado</p>
+  </div>
+  """)
+
+  Process.sleep(1000)
+  {:cont, frame, contador + 1}
+end)
+```
+
+## 🌈 Animación de Colores
+
+```elixir
+colores = ["#ff6b6b", "#4ecdc4", "#45b7d1", "#f9ca24", "#6c5ce7"]
+
+Kino.animate(0, fn indice ->
+  color = Enum.at(colores, rem(indice, length(colores)))
+
+  frame = Kino.Markdown.new("""
+  <div style="background-color: #{color}; padding: 60px; border-radius: 20px; text-align: center;">
+    <h1 style="font-size: 100px; color: white;">✨</h1>
+  </div>
+  """)
+
+  Process.sleep(500)
+  {:cont, frame, indice + 1}
+end)
+```
+
+## 🎯 Tu Turno: Crea Tu Animación
+
+```elixir
+# Crea una animación con emojis o texto que cambie
+```
+
+## 📝 Resumen
+
+* ✅ Kino.animate
+* ✅ Process.sleep para timing
+* ✅ Animaciones visuales
+
+---
+
+**¡Tus programas ahora se mueven! 🎬✨**
+

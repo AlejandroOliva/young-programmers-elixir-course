@@ -1,0 +1,71 @@
+# 📊 Class 8: Data Structures
+
+```elixir
+Mix.install([{:kino, "~> 0.12.0"}])
+```
+
+## 🎯 Objectives
+
+* 📊 Understand Maps (dictionaries)
+* 🎁 Work with tuples
+* 🗂️ Organize complex data
+
+## 🗺️ Maps - Like a Dictionary
+
+```elixir
+person = %{
+  name: "Ana",
+  age: 10,
+  favorite_color: "blue"
+}
+
+IO.puts("Name: #{person.name}")
+IO.puts("Age: #{person.age}")
+IO.puts("Favorite color: #{person.favorite_color}")
+```
+
+## 🎁 Tuples - Ordered Groups
+
+```elixir
+coordinates = {10, 20}
+{x, y} = coordinates
+
+IO.puts("X: #{x}, Y: #{y}")
+```
+
+## 🎯 Your Turn
+
+```elixir
+my_profile = %{
+  name: "Your name",
+  age: 0,
+  hobbies: ["...", "...", "..."],
+  favorite: %{
+    color: "...",
+    animal: "..."
+  }
+}
+
+Kino.Markdown.new("""
+# #{my_profile.name}
+
+**Age:** #{my_profile.age}
+
+**Hobbies:** #{Enum.join(my_profile.hobbies, ", ")}
+
+**Favorites:**
+- Color: #{my_profile.favorite.color}
+- Animal: #{my_profile.favorite.animal}
+""")
+```
+
+## 📝 Summary
+
+* ✅ Maps for structured data
+* ✅ Tuples for groups
+* ✅ Nested data
+
+---
+
+**You organize data like a professional! 📊✨**
+

@@ -1,0 +1,61 @@
+# 🔄 Clase 8: Procesos Básicos
+
+```elixir
+# Introducción a procesos y concurrencia
+```
+
+## 🎯 Objetivos
+
+* 🔄 Entender qué son los procesos
+* 📨 Enviar y recibir mensajes
+* ⚡ Concurrencia básica
+
+## 🔄 ¿Qué es un Proceso?
+
+En Elixir, los procesos son unidades independientes que pueden ejecutarse en paralelo.
+
+## 📨 Enviar Mensajes
+
+```elixir
+# Crear un proceso que recibe mensajes
+pid = spawn(fn ->
+  receive do
+    {:saludo, nombre} ->
+      IO.puts("¡Hola, #{nombre}!")
+  end
+end)
+
+# Enviar mensaje
+send(pid, {:saludo, "Programador"})
+Process.sleep(100)
+```
+
+## 🎯 Proceso que Responde
+
+```elixir
+padre = self()
+
+spawn(fn ->
+  receive do
+    {:pregunta, pregunta} ->
+      respuesta = "Recibí: #{pregunta}"
+      send(padre, {:respuesta, respuesta})
+  end
+end)
+|> send({:pregunta, "¿Cómo estás?"})
+
+receive do
+  {:respuesta, msg} -> IO.puts(msg)
+end
+```
+
+## 📝 Resumen
+
+* ✅ Procesos básicos
+* ✅ spawn, send, receive
+* ✅ Concurrencia simple
+
+---
+
+**¡Entiendes procesos! 🔄✨**
+

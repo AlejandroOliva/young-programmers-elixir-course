@@ -1,0 +1,86 @@
+# 🔄 Clase 1: Recursión Básica
+
+```elixir
+Mix.install([{:kino, "~> 0.12.0"}])
+```
+
+## 🎯 Objetivos
+
+* 🔄 Entender qué es la recursión
+* 📐 Crear funciones recursivas simples
+* 🎯 Identificar casos base
+
+## 🔄 ¿Qué es la Recursión?
+
+**Recursión** es cuando una función se llama a sí misma.
+
+Como muñecas rusas: cada muñeca contiene otra más pequeña, hasta llegar a la más pequeña.
+
+## 🎯 Cuenta Regresiva Recursiva
+
+```elixir
+defmodule Cohete do
+  def cuenta_regresiva(0) do
+    IO.puts("🚀 ¡DESPEGUE!")
+  end
+
+  def cuenta_regresiva(n) do
+    IO.puts("#{n}...")
+    Process.sleep(1000)
+    cuenta_regresiva(n - 1)
+  end
+end
+
+Cohete.cuenta_regresiva(5)
+```
+
+## 🧮 Sumar Números
+
+```elixir
+defmodule Matematicas do
+  def sumar_hasta(0), do: 0
+  def sumar_hasta(n), do: n + sumar_hasta(n - 1)
+end
+
+# Suma 1 + 2 + 3 + 4 + 5
+Matematicas.sumar_hasta(5)
+```
+
+## 🎯 Tu Turno
+
+```elixir
+defmodule MiRecursion do
+  def contar_hasta(n, actual \\\\ 1)
+
+  def contar_hasta(n, actual) when actual > n, do: :fin
+
+  def contar_hasta(n, actual) do
+    IO.puts(actual)
+    contar_hasta(n, actual + 1)
+  end
+end
+
+MiRecursion.contar_hasta(10)
+```
+
+## 🏆 Desafío: Factorial
+
+```elixir
+defmodule Factorial do
+  def calc(0), do: 1
+  def calc(n), do: n * calc(n - 1)
+end
+
+Factorial.calc(5)  # 5 * 4 * 3 * 2 * 1 = 120
+```
+
+## 📝 Resumen
+
+* ✅ Recursión = función que se llama a sí misma
+* ✅ Caso base = cuando parar
+* ✅ Caso recursivo = seguir llamando
+
+---
+
+**¡Piensas recursivamente! 🔄✨**
+

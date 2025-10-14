@@ -1,0 +1,52 @@
+# 🔄 Clase 9: Repaso General
+
+```elixir
+Mix.install([{:kino, "~> 0.12.0"}])
+```
+
+## 🎯 Objetivos
+
+* 📚 Repasar todos los conceptos del Nivel 2
+* 🏆 Completar desafíos integradores
+* 🌟 Prepararse para el proyecto final
+
+## 📖 ¿Qué Hemos Aprendido?
+
+* ✅ If/else y lógica condicional
+* ✅ Functions con pattern matching
+* ✅ Enum.each y Enum.map
+* ✅ Animaciones con Kino
+* ✅ Maps y estructuras de datos
+
+## 🎮 Reto Integrador
+
+Crea un programa que:
+- Use al menos 3 conceptos del nivel
+- Tenga interactividad
+- Muestre resultados visuales
+- Sea creativo
+
+```elixir
+# Tu proyecto integrador aquí
+```
+
+## 💭 Auto-Evaluación
+
+¿Puedo...?
+- [ ] Usar if/else y cond correctamente
+- [ ] Crear funciones con pattern matching
+- [ ] Iterar sobre listas con Enum
+- [ ] Trabajar con Maps
+- [ ] Crear animaciones
+- [ ] Combinar todo lo anterior
+
+## 📝 Resumen
+
+* ✅ Repaso completo del nivel
+* ✅ Desafíos integradores
+* ✅ Preparación para proyecto final
+
+---
+
+**¡Casi terminas el Nivel 2! 🌟**
+

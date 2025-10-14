@@ -1,0 +1,82 @@
+# 📊 Class 3: Data Processing
+
+```elixir
+Mix.install([{:kino, "~> 0.12.0"}])
+```
+
+## 🎯 Objectives
+
+* 📊 Advanced Enum (filter, reduce)
+* ⚡ Pipe operator |>
+* 🎯 Data transformations
+
+## 🔍 Enum.filter - Filter Elements
+
+```elixir
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+evens = Enum.filter(numbers, fn n -> rem(n, 2) == 0 end)
+
+IO.inspect(evens)
+```
+
+## ⚡ Pipe Operator |>
+
+The pipe operator makes code more readable:
+
+```elixir
+# Without pipe
+result = Enum.sum(Enum.map(Enum.filter([1, 2, 3, 4, 5], fn x -> x > 2 end), fn x -> x * 2 end))
+
+# With pipe (much clearer)
+result =
+  [1, 2, 3, 4, 5]
+  |> Enum.filter(fn x -> x > 2 end)
+  |> Enum.map(fn x -> x * 2 end)
+  |> Enum.sum()
+
+IO.puts(result)
+```
+
+## 🎯 Enum.reduce - Accumulate Values
+
+```elixir
+numbers = [1, 2, 3, 4, 5]
+
+sum = Enum.reduce(numbers, 0, fn number, accumulator ->
+  accumulator + number
+end)
+
+IO.puts("Total sum: #{sum}")
+```
+
+## 🏆 Challenge: Data Processor
+
+```elixir
+students = [
+  %{name: "Ana", grade: 95},
+  %{name: "Peter", grade: 78},
+  %{name: "Mary", grade: 88},
+  %{name: "Luis", grade: 65}
+]
+
+# Filter passing (>= 70), get names
+passing =
+  students
+  |> Enum.filter(fn s -> s.grade >= 70 end)
+  |> Enum.map(fn s -> s.name end)
+
+IO.puts("Passing: #{Enum.join(passing, ", ")}")
+```
+
+## 📝 Summary
+
+* ✅ Enum.filter
+* ✅ Enum.reduce
+* ✅ Pipe operator |>
+* ✅ Chained transformations
+
+---
+
+**You process data like a professional! 📊✨**
+

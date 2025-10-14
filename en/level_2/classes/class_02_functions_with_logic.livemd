@@ -1,0 +1,90 @@
+# 🎯 Class 2: Functions with Logic
+
+```elixir
+Mix.install([{:kino, "~> 0.12.0"}])
+```
+
+## 🎯 Objectives
+
+* 🔀 Combine functions with conditional logic
+* 📐 Basic pattern matching in functions
+* ✨ Create smarter functions
+
+## 🎪 Functions that Decide
+
+Functions can make decisions:
+
+```elixir
+defmodule Classifier do
+  def classify_age(age) do
+    if age < 13 do
+      "Child"
+    else
+      if age < 18 do
+        "Teenager"
+      else
+        "Adult"
+      end
+    end
+  end
+end
+
+Classifier.classify_age(10)
+```
+
+## 🌟 Pattern Matching in Functions
+
+A more elegant way to write functions!
+
+```elixir
+defmodule BetterClassifier do
+  def classify_age(age) when age < 13, do: "Child"
+  def classify_age(age) when age < 18, do: "Teenager"
+  def classify_age(_age), do: "Adult"
+end
+
+BetterClassifier.classify_age(10)
+BetterClassifier.classify_age(15)
+BetterClassifier.classify_age(25)
+```
+
+## 🎯 Your Turn
+
+```elixir
+defmodule MyClassifier do
+  def number_size(n) when n < 10, do: "Small"
+  def number_size(n) when n < 100, do: "Medium"
+  def number_size(_n), do: "Large"
+end
+
+# Try it
+MyClassifier.number_size(5)
+```
+
+## 🏆 Challenge: Smart Calculator
+
+Create a calculator that handles division by zero:
+
+```elixir
+defmodule SmartCalculator do
+  def divide(_a, 0), do: {:error, "Cannot divide by zero"}
+  def divide(a, b), do: {:ok, a / b}
+end
+
+SmartCalculator.divide(10, 2)
+SmartCalculator.divide(10, 0)
+```
+
+## 📝 Summary
+
+Today you learned:
+
+* ✅ Combine functions with if/else
+* ✅ Pattern matching in functions
+* ✅ Guards with `when`
+* ✅ Create smart functions
+
+---
+
+**Your functions can now think! 🎯✨**
+

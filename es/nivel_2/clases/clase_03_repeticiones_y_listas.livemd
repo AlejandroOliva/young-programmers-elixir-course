@@ -1,0 +1,79 @@
+# 🔄 Clase 3: Repeticiones y Listas
+
+```elixir
+Mix.install([{:kino, "~> 0.12.0"}])
+```
+
+## 🎯 Objetivos
+
+* 🔄 Usar Enum.each para repetir acciones
+* 🎨 Usar Enum.map para transformar listas
+* 📋 Trabajar con colecciones de forma avanzada
+
+## 🔄 Enum.each - Hacer Algo con Cada Elemento
+
+```elixir
+nombres = ["Ana", "Pedro", "María", "Luis"]
+
+Enum.each(nombres, fn nombre ->
+  IO.puts("¡Hola, #{nombre}!")
+end)
+```
+
+## 🎨 Enum.map - Transformar Elementos
+
+```elixir
+numeros = [1, 2, 3, 4, 5]
+
+dobles = Enum.map(numeros, fn numero ->
+  numero * 2
+end)
+
+IO.inspect(dobles)
+```
+
+## 🎯 Tu Turno
+
+```elixir
+colores = ["rojo", "azul", "verde"]
+
+# Usa Enum.each para mostrar cada color
+Enum.each(colores, fn color ->
+  IO.puts("Mi color: #{color}")
+end)
+```
+
+## 🏆 Desafío: Galería Interactiva
+
+```elixir
+emojis = ["⭐", "🌟", "✨", "💫", "🌈"]
+
+html = Enum.map(emojis, fn emoji ->
+  """
+  <div style="display: inline-block; font-size: 60px; margin: 10px;">
+    #{emoji}
+  </div>
+  """
+end)
+|> Enum.join("")
+
+Kino.Markdown.new("""
+<div style="background-color: #1a1a2e; padding: 30px; text-align: center; border-radius: 15px;">
+  #{html}
+</div>
+""")
+```
+
+## 📝 Resumen
+
+Hoy aprendiste:
+
+* ✅ Enum.each para repetir acciones
+* ✅ Enum.map para transformar listas
+* ✅ Funciones anónimas (fn ... end)
+* ✅ Pipe operator |>
+
+---
+
+**¡Ahora puedes trabajar con colecciones! 🔄✨**
+

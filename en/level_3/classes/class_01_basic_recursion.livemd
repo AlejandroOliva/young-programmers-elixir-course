@@ -1,0 +1,86 @@
+# 🔄 Class 1: Basic Recursion
+
+```elixir
+Mix.install([{:kino, "~> 0.12.0"}])
+```
+
+## 🎯 Objectives
+
+* 🔄 Understand what recursion is
+* 📐 Create simple recursive functions
+* 🎯 Identify base cases
+
+## 🔄 What is Recursion?
+
+**Recursion** is when a function calls itself.
+
+Like Russian dolls: each doll contains another smaller one, until reaching the smallest.
+
+## 🎯 Recursive Countdown
+
+```elixir
+defmodule Rocket do
+  def countdown(0) do
+    IO.puts("🚀 LIFTOFF!")
+  end
+
+  def countdown(n) do
+    IO.puts("#{n}...")
+    Process.sleep(1000)
+    countdown(n - 1)
+  end
+end
+
+Rocket.countdown(5)
+```
+
+## 🧮 Sum Numbers
+
+```elixir
+defmodule Math do
+  def sum_up_to(0), do: 0
+  def sum_up_to(n), do: n + sum_up_to(n - 1)
+end
+
+# Sum 1 + 2 + 3 + 4 + 5
+Math.sum_up_to(5)
+```
+
+## 🎯 Your Turn
+
+```elixir
+defmodule MyRecursion do
+  def count_to(n, current \\\\ 1)
+
+  def count_to(n, current) when current > n, do: :done
+
+  def count_to(n, current) do
+    IO.puts(current)
+    count_to(n, current + 1)
+  end
+end
+
+MyRecursion.count_to(10)
+```
+
+## 🏆 Challenge: Factorial
+
+```elixir
+defmodule Factorial do
+  def calc(0), do: 1
+  def calc(n), do: n * calc(n - 1)
+end
+
+Factorial.calc(5)  # 5 * 4 * 3 * 2 * 1 = 120
+```
+
+## 📝 Summary
+
+* ✅ Recursion = function that calls itself
+* ✅ Base case = when to stop
+* ✅ Recursive case = keep calling
+
+---
+
+**You think recursively! 🔄✨**
+

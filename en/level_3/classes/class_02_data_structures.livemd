@@ -1,0 +1,65 @@
+# 📊 Class 2: Advanced Data Structures
+
+```elixir
+Mix.install([{:kino, "~> 0.12.0"}])
+```
+
+## 🎯 Objectives
+
+* 📊 Advanced Maps
+* 🔑 Keyword lists
+* 🎁 Complex tuples
+
+## 🗺️ Nested Maps
+
+```elixir
+school = %{
+  name: "Programming School",
+  students: [
+    %{name: "Ana", age: 12, level: 3},
+    %{name: "Peter", age: 13, level: 3}
+  ],
+  courses: %{
+    elixir: %{level: 3, duration: "10 weeks"},
+    python: %{level: 2, duration: "8 weeks"}
+  }
+}
+
+# Access nested data
+IO.puts("First student: #{hd(school.students).name}")
+IO.puts("Elixir duration: #{school.courses.elixir.duration}")
+```
+
+## 🔑 Keyword Lists
+
+```elixir
+options = [name: "My App", version: "1.0", debug: true]
+
+IO.inspect(options)
+IO.puts("Name: #{options[:name]}")
+```
+
+## 🎯 Your Turn
+
+Create your programmer profile with nested data.
+
+```elixir
+my_profile = %{
+  info: %{name: "...", age: 0},
+  skills: ["Elixir", "..."],
+  projects: [
+    %{name: "...", level: 1}
+  ]
+}
+```
+
+## 📝 Summary
+
+* ✅ Nested data
+* ✅ Keyword lists
+* ✅ Complex structures
+
+---
+
+**You handle advanced data! 📊✨**
+

@@ -1,0 +1,90 @@
+# 🎯 Clase 2: Funciones con Lógica
+
+```elixir
+Mix.install([{:kino, "~> 0.12.0"}])
+```
+
+## 🎯 Objetivos
+
+* 🔀 Combinar funciones con lógica condicional
+* 📐 Pattern matching básico en funciones
+* ✨ Crear funciones más inteligentes
+
+## 🎪 Funciones que Deciden
+
+Las funciones pueden tomar decisiones:
+
+```elixir
+defmodule Clasificador do
+  def clasificar_edad(edad) do
+    if edad < 13 do
+      "Niño"
+    else
+      if edad < 18 do
+        "Adolescente"
+      else
+        "Adulto"
+      end
+    end
+  end
+end
+
+Clasificador.clasificar_edad(10)
+```
+
+## 🌟 Pattern Matching en Funciones
+
+¡Una forma más elegante de escribir funciones!
+
+```elixir
+defmodule ClasificadorMejor do
+  def clasificar_edad(edad) when edad < 13, do: "Niño"
+  def clasificar_edad(edad) when edad < 18, do: "Adolescente"
+  def clasificar_edad(_edad), do: "Adulto"
+end
+
+ClasificadorMejor.clasificar_edad(10)
+ClasificadorMejor.clasificar_edad(15)
+ClasificadorMejor.clasificar_edad(25)
+```
+
+## 🎯 Tu Turno
+
+```elixir
+defmodule MiClasificador do
+  def tamaño_numero(n) when n < 10, do: "Pequeño"
+  def tamaño_numero(n) when n < 100, do: "Mediano"
+  def tamaño_numero(_n), do: "Grande"
+end
+
+# Pruébalo
+MiClasificador.tamaño_numero(5)
+```
+
+## 🏆 Desafío: Calculadora Inteligente
+
+Crea una calculadora que maneje división por cero:
+
+```elixir
+defmodule CalculadoraInteligente do
+  def dividir(_a, 0), do: {:error, "No se puede dividir por cero"}
+  def dividir(a, b), do: {:ok, a / b}
+end
+
+CalculadoraInteligente.dividir(10, 2)
+CalculadoraInteligente.dividir(10, 0)
+```
+
+## 📝 Resumen
+
+Hoy aprendiste:
+
+* ✅ Combinar funciones con if/else
+* ✅ Pattern matching en funciones
+* ✅ Guards con `when`
+* ✅ Crear funciones inteligentes
+
+---
+
+**¡Tus funciones ahora pueden pensar! 🎯✨**
+

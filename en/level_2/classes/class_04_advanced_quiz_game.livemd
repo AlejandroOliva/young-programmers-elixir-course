@@ -1,0 +1,70 @@
+# 🎮 Class 4: Advanced Quiz Game
+
+```elixir
+Mix.install([{:kino, "~> 0.12.0"}])
+```
+
+## 🎯 Objectives
+
+* 🎮 Create a complete interactive game
+* 📊 Advanced scoring system
+* 🎨 Visual feedback based on performance
+
+## 🎲 Complete Trivia Game
+
+```elixir
+defmodule TriviaGame do
+  def start do
+    Kino.Markdown.new("""
+    # 🧠 SUPER TRIVIA 🧠
+    Answer correctly to win points!
+    """)
+  end
+
+  def check_answer(answer, correct, points) do
+    if String.downcase(answer) == String.downcase(correct) do
+      {points + 10, "✅ Correct! +10 points"}
+    else
+      {points, "❌ Incorrect. The answer was: #{correct}"}
+    end
+  end
+
+  def show_result(points) do
+    {color, message, emoji} = cond do
+      points >= 80 -> {"#4caf50", "EXCELLENT!", "🌟"}
+      points >= 50 -> {"#2196f3", "Well done!", "👍"}
+      points >= 30 -> {"#ff9800", "Good try", "💪"}
+      true -> {"#f44336", "Keep practicing", "📚"}
+    end
+
+    Kino.Markdown.new("""
+    <div style="background-color: #{color}; padding: 50px; border-radius: 20px; color: white; text-align: center;">
+      <h1 style="font-size: 80px;">#{emoji}</h1>
+      <h2>#{message}</h2>
+      <h3 style="font-size: 48px;">#{points} points</h3>
+    </div>
+    """)
+  end
+end
+
+TriviaGame.start()
+```
+
+## 🎯 Your Turn: Create Your Game
+
+Create a trivia game about your favorite topic with at least 5 questions.
+
+```elixir
+# Your game here
+```
+
+## 📝 Summary
+
+* ✅ Games with scoring
+* ✅ Complex logic
+* ✅ Visual feedback
+
+---
+
+**You're a game developer! 🎮✨**
+
