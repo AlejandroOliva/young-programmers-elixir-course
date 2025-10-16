@@ -391,7 +391,7 @@ git add .
 git commit -m "Backup de notebooks"
 
 # Subir a GitHub (opcional)
-git remote add origin https://github.com/tu-usuario/elixir-kids.git
+git remote add origin https://github.com/AlejandroOliva/elixir-kids.git
 git push -u origin main
 ```
 

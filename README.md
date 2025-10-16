@@ -58,7 +58,7 @@ Un curso completo de programación en Elixir que incluye:
 ### English
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/young-programmers-elixir-course.git
+git clone https://github.com/AlejandroOliva/young-programmers-elixir-course.git
 cd young-programmers-elixir-course
 
 # Follow the English installation guide
@@ -69,7 +69,7 @@ cat global_guide/installation_local.md
 ### Español
 ```bash
 # Clonar el repositorio
-git clone https://github.com/yourusername/young-programmers-elixir-course.git
+git clone https://github.com/AlejandroOliva/young-programmers-elixir-course.git
 cd young-programmers-elixir-course
 
 # Seguir la guía de instalación en español

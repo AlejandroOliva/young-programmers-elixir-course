@@ -220,7 +220,7 @@ mi_firmware/
 ## 📦 Instalación
 
 \`\`\`bash
-git clone [url]
+git clone https://github.com/AlejandroOliva/young-programmers-elixir-course.git
 cd [proyecto]
 mix deps.get
 mix ecto.setup
